@@ -10,6 +10,22 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/textView3"
+        android:layout_width="411dp"
+        android:layout_height="47dp"
+        android:background="#3d9acc"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal|fill_vertical"
+        android:text="IsoHelp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
         android:id="@+id/editTextTextMultiLine2"
         android:layout_width="344dp"
         android:layout_height="90dp"
@@ -27,10 +43,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="366dp"
-        android:layout_height="121dp"
+        android:layout_width="367dp"
+        android:layout_height="88dp"
         android:layout_marginBottom="60dp"
         android:ems="14"
         android:gravity="center_horizontal"

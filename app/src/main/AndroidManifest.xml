@@ -48,6 +48,14 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name=".UserTaskAccepted"
+            android:label="User Task Accepted Menu"
+            android:parentActivityName=".IsolatingMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IsolatingMainActivity" />
+        </activity>
+        <activity
             android:name=".VolunteerMainActivity"
             android:label="Volunteer Menu"
             android:parentActivityName=".MainActivity">
