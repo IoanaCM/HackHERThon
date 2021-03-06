@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hackherthon.VolunteerSettingsActivity"
+    tools:context="com.example.hackherthon.IsolatingSettingsActivity"
     android:orientation="vertical"
     android:padding="20sp">
 
@@ -24,7 +24,14 @@
         android:layout_marginBottom="20sp"
         android:inputType="number"/>
 
-
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="Address"
+        android:layout_marginBottom="20sp"
+        android:inputType="number"/>
 
     <Button
         android:id="@+id/confirm"

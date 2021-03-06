@@ -32,10 +32,11 @@ import java.util.Map;
 
 public class IsolatingSettingsActivity extends AppCompatActivity {
 
-    private EditText mNameField, mPhoneField;
+    private EditText mNameField, mPhoneField, mAddressField;
 
     private Button mBack, mConfirm;
 
+    private RadioGroup mRadioGroup;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mIsolatingDatabase;
@@ -43,6 +44,8 @@ public class IsolatingSettingsActivity extends AppCompatActivity {
     private String userID;
     private String mName;
     private String mPhone;
+    private String mAddress;
+    private String mService;
 
 
     @Override
@@ -53,6 +56,10 @@ public class IsolatingSettingsActivity extends AppCompatActivity {
 
         mNameField = (EditText) findViewById(R.id.name);
         mPhoneField = (EditText) findViewById(R.id.phone);
+        mAddressField = (EditText) findViewById(R.id.address);
+        mRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+
+
 
         mBack = (Button) findViewById(R.id.back);
         mConfirm = (Button) findViewById(R.id.confirm);
@@ -109,11 +116,20 @@ public class IsolatingSettingsActivity extends AppCompatActivity {
     private void saveUserInformation() {
         mName = mNameField.getText().toString();
         mPhone = mPhoneField.getText().toString();
+        mAddress = mAddressField.getText().toString();
+        int selectId = mRadioGroup.getCheckedRadioButtonId();
+
+        final RadioButton radioButton = (RadioButton) findViewById(selectId);
+
+
+        mService = radioButton.getText().toString();
 
 
         Map userInfo = new HashMap();
         userInfo.put("name", mName);
         userInfo.put("phone", mPhone);
+        userInfo.put("address", mAddress);
+
         mIsolatingDatabase.updateChildren(userInfo);
 
 

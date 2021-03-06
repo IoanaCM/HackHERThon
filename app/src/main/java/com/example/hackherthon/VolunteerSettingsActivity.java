@@ -43,10 +43,6 @@ public class VolunteerSettingsActivity extends AppCompatActivity {
     private String userID;
     private String mName;
     private String mPhone;
-    private String mService;
-
-
-    private Uri resultUri;
 
     private RadioGroup mRadioGroup;
 
@@ -61,7 +57,7 @@ public class VolunteerSettingsActivity extends AppCompatActivity {
         mPhoneField = (EditText) findViewById(R.id.phone);
 
 
-        mRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+
 
         mBack = (Button) findViewById(R.id.back);
         mConfirm = (Button) findViewById(R.id.confirm);
@@ -104,20 +100,7 @@ public class VolunteerSettingsActivity extends AppCompatActivity {
                         mPhoneField.setText(mPhone);
                     }
 
-                    if(map.get("service")!=null){
-                        mService = map.get("service").toString();
-                        switch (mService){
-                            case"UberX":
-                                mRadioGroup.check(R.id.GroceryDelivery);
-                                break;
-                            case"UberBlack":
-                                mRadioGroup.check(R.id.ParcelPickUp);
-                                break;
-                            case"UberXl":
-                                mRadioGroup.check(R.id.DogWalking);
-                                break;
-                        }
-                    }
+
 
                 }
             }
@@ -134,46 +117,16 @@ public class VolunteerSettingsActivity extends AppCompatActivity {
         mName = mNameField.getText().toString();
         mPhone = mPhoneField.getText().toString();
 
-        int selectId = mRadioGroup.getCheckedRadioButtonId();
 
-        final RadioButton radioButton = (RadioButton) findViewById(selectId);
-
-        if (radioButton.getText() == null) {
-            return;
-        }
-
-        mService = radioButton.getText().toString();
 
         Map userInfo = new HashMap();
         userInfo.put("name", mName);
         userInfo.put("phone", mPhone);
-        userInfo.put("service", mService);
         mVolunteerDatabase.updateChildren(userInfo);
 
-        if (resultUri != null) {
-
-            StorageReference filePath = FirebaseStorage.getInstance().getReference().child("profile_images").child(userID);
-            Bitmap bitmap = null;
-            try {
-                bitmap = MediaStore.Images.Media.getBitmap(getApplication().getContentResolver(), resultUri);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 20, baos);
-            byte[] data = baos.toByteArray();
-            UploadTask uploadTask = filePath.putBytes(data);
-
-            uploadTask.addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    finish();
-                    return;
-                }
-            });
 
 
-        }
+
+
 
     }}

@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 public class IsolatingMainActivity extends AppCompatActivity {
 
@@ -17,15 +19,15 @@ public class IsolatingMainActivity extends AppCompatActivity {
         Button nextTask = (Button) findViewById(R.id.addNextTask);
 
         //add the onClick listener
-        nextTask.setOnClickListener(new View.OnClickListener(){
+        nextTask.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 Intent acceptedTaskIntent = new Intent(IsolatingMainActivity.this, UserTaskAccepted.class);
 
                 startActivity(acceptedTaskIntent);
             }
         });
+
+
     }
-
-
 }
