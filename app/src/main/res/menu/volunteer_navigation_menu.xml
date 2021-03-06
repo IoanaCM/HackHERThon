@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/volunteer_searchtask"
+        android:enabled="true"
+        android:icon="@drawable/search"
+        android:title="@string/text_volunteersearchtask"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/volunteer_pendingtasks"
+        android:enabled="true"
+        android:icon="@drawable/tasks"
+        android:title="@string/text_volunteerpendingtasks"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/volunteer_completedtasks"
+        android:enabled="true"
+        android:icon="@drawable/completed"
+        android:title="@string/text_volunteercompletedtasks"
+        app:showAsAction="ifRoom"/>
+</menu>
