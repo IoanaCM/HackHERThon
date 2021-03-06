@@ -56,14 +56,14 @@
         android:inputType="textMultiLine"
         android:text="Let's get you started\n\nI am a:"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/isolatingButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/volunteerButton"
         android:layout_width="236dp"
         android:layout_height="65dp"
         android:layout_marginBottom="120dp"
@@ -76,14 +76,15 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/isolatingButton"
         android:layout_width="236dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="#FFFFFF"
         android:text="Isolating User"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/volunteerButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
