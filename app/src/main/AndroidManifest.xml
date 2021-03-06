@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hackherthon">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -16,7 +16,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".VolunteerLoginActivity"
+            android:label="@string/title_activity_volunteer_login"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="ExtraText"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".IsolatingLoginActivity"
+            android:label="IsolatingLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="DuplicateActivity,ExtraText"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -27,11 +46,12 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="@string/google_maps_key"
+            />
 
         <activity
             android:name=".IsolatingMapActivity"
-            android:label="@string/title_activity_isolating_map"></activity>
+            android:label="@string/title_activity_isolating_map" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,18 +62,26 @@
         <activity
             android:name=".IsolatingMainActivity"
             android:label="Isolating Menu"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".IsolatingLoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".VolunteerMainActivity"
-            android:label="Volunteer Menu"
-            android:parentActivityName=".MainActivity">
+            android:name=".UserTaskAccepted"
+            android:label="User Task Accepted Menu"
+            android:parentActivityName=".IsolatingMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".IsolatingMainActivity" />
+        </activity>
+        <activity
+            android:name=".VolunteerMainActivity"
+            android:label="Volunteer Menu"
+            android:parentActivityName=".VolunteerLoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".VolunteerLoginActivity" />
         </activity>
     </application>
 
