@@ -4,15 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#39A5E3"
+    android:backgroundTint="@color/colorPrimaryDark"
+    android:backgroundTintMode="add"
+    tools:context=".MainActivity" >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/textView3"
+        android:layout_width="411dp"
+        android:layout_height="47dp"
+        android:background="#174D9F"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal|fill_vertical"
+        android:text="IsoHelp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <TextView
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="344dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="48dp"
+        android:ems="14"
+        android:gravity="center_horizontal"
+        android:inputType="textMultiLine"
+        android:text="Hi there!\nWelcome to IsoHelp"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="366dp"
+        android:layout_height="121dp"
+        android:layout_marginBottom="60dp"
+        android:ems="14"
+        android:gravity="center_horizontal"
+        android:inputType="textMultiLine"
+        android:text="Let's get you started\n\nI am a:"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="236dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="NHS Volunteer"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="236dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Isolating User"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
