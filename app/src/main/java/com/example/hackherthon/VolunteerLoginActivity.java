@@ -35,7 +35,7 @@ public class VolunteerLoginActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if(user != null){
-                    Intent intent = new Intent(VolunteerLoginActivity.this, VolunteerTaskStatusActivity.class);
+                    Intent intent = new Intent(VolunteerLoginActivity.this, VolunteerMainActivity.class);
                     startActivity(intent);
                     finish();
                 }

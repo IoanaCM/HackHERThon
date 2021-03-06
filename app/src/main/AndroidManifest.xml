@@ -16,12 +16,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VolunteerTaskStatusActivity">
-
-        </activity>
-        <activity android:name=".IsolatingTaskStatusActivity">
-
-        </activity>
         <activity
             android:name=".VolunteerLoginActivity"
             android:label="@string/title_activity_volunteer_login"

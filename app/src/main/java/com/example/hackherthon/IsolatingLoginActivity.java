@@ -35,8 +35,10 @@ public class IsolatingLoginActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
                 if (user != null){
-                    Intent intent = new Intent(IsolatingLoginActivity.this, IsolatingTaskStatusActivity.class);
+                    Intent intent = new Intent(IsolatingLoginActivity.this, IsolatingMainActivity.class);
+
                     startActivity(intent);
                     finish();
                     return;
