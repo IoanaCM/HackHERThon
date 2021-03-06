@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "907868505016",
+    "project_id": "hackherthon-28413",
+    "storage_bucket": "hackherthon-28413.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907868505016:android:9122d5e48745d4df0ac54d",
+        "android_client_info": {
+          "package_name": "com.example.hackherthon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907868505016-1b2gbml3ngqf4ef4pknl6vm4lrfhd60s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hackherthon",
+            "certificate_hash": "99251c1022abcc5479ec430f2f18e93def724292"
+          }
+        },
+        {
+          "client_id": "907868505016-krqceovvu18i7kjfvnri0sm7e9kbgh7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaSY_8aMy-NJyh3qhq-zSCvfSIqcz983c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907868505016-krqceovvu18i7kjfvnri0sm7e9kbgh7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

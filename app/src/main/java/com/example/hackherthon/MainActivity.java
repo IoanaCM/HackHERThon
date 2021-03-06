@@ -27,6 +27,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(isolatingIntent);
             }
         });
+
+        Button volunteer = (Button) findViewById(R.id.volunteerButton);
+
+        //add the onClick listener
+        volunteer.setOnClickListener(new OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent volunteerMainIntent = new Intent(MainActivity.this, VolunteerMainActivity.class);
+
+                startActivity(volunteerMainIntent);
+            }
+        });
     }
 
 
