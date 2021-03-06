@@ -14,9 +14,11 @@ public class IsolatingMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.isolating_main);
+        setContentView(R.layout.task_status);
 
-        Button nextTask = (Button) findViewById(R.id.addNextTask);
+        //IMPLEMENT ONCE ATHENA ADDS THE NAVIGATION BAR AND WE HAVE THE ADD TASK PAGE WORKING
+
+    /*    Button nextTask = (Button) findViewById(R.id.addNextTask);
 
         //add the onClick listener
         nextTask.setOnClickListener(new View.OnClickListener() {
@@ -26,7 +28,7 @@ public class IsolatingMainActivity extends AppCompatActivity {
 
                 startActivity(acceptedTaskIntent);
             }
-        });
+        });*/
 
 
     }
