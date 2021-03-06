@@ -1,6 +1,616 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/taskStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3d9acc"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:text="Task Status"
+        android:textColor="#ffffff"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ScrollView
+        android:layout_width="373dp"
+        android:layout_height="550dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="89dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/AcceptedTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ACCEPTED TASKS"
+                android:textColor="#3d9acc"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/task1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0001" />
+
+            <TextView
+                android:id="@+id/taskOutline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect Groceries from Little Waitrose &#038; Partners, Gloucester Road"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act2"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act3"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac4"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/task2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0002" />
+
+            <TextView
+                android:id="@+id/taskOutline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Walk Dog"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act5"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act6"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac7"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider"
+                />
+
+            <TextView
+                android:id="@+id/task3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0003" />
+
+            <TextView
+                android:id="@+id/taskOutline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post Parcel to Gloucester Road Post Office"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act8"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act9"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac10"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/task4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0004" />
+
+            <TextView
+                android:id="@+id/taskOutline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect Mail for Flat 1A, Gloucester Road"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act11"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act12"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac13"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/task5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0005" />
+
+            <TextView
+                android:id="@+id/taskOutline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Walk Dog"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act24"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act15"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac16"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/task6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0006" />
+
+            <TextView
+                android:id="@+id/taskOutline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect Medicine from Boots"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act13"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act14"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac15"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/task7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0007" />
+
+            <TextView
+                android:id="@+id/taskOutline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Walk Dog"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act16"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act17"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac18"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/task8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0008" />
+
+            <TextView
+                android:id="@+id/taskOutline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect Mail for Flat 2B, GLoucester Road"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act23"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act18"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac19"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/task9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="TASK#0001" />
+
+            <TextView
+                android:id="@+id/taskOutline9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Walk Dog"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_act20"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#3d9acc"
+                    android:padding="5dp"
+                    android:text="View"
+                    android:textColor="#ffffff" />
+
+
+                <Button
+                    android:id="@+id/btn_act21"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#F44336"
+                    android:padding="5dp"
+                    android:text="CANCEL"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/btn_ac22"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#8BC34A"
+                    android:padding="5dp"
+                    android:text="COMPLETED"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
