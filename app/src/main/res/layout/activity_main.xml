@@ -4,36 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/colorPrimaryDark"
+    android:backgroundTintMode="add"
+    tools:context=".MainActivity" >
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Are you a volunteer or are you self-isolating?"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/isolatingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I am isolating"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="344dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="48dp"
+        android:ems="14"
+        android:gravity="center_horizontal"
+        android:inputType="textMultiLine"
+        android:text="Hi there!\nWelcome to IsoHelp"
+        android:textColor="#3d9acc"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/volunteerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Volunteer"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="366dp"
+        android:layout_height="121dp"
+        android:layout_marginBottom="60dp"
+        android:ems="14"
+        android:gravity="center_horizontal"
+        android:inputType="textMultiLine"
+        android:text="Let's get started\n\nI am a:"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/isolatingButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/volunteerButton"
+        android:layout_width="236dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#3d9acc"
+        android:text="NHS Volunteer"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/isolatingButton"
+        android:layout_width="236dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#3d9acc"
+        android:textColor="#ffffff"
+        android:text="Isolating User"
+        app:layout_constraintBottom_toTopOf="@+id/volunteerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
