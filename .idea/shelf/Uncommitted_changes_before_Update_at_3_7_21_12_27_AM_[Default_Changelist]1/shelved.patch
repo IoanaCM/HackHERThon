@@ -1,0 +1,470 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    package=\"com.example.hackherthon\">\n    <!--\n         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use\n         Google Maps Android API v2, but you must specify either coarse or fine\n         location permissions for the \"MyLocation\" functionality.\n    -->\n    <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />\n\n    <application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"IsoHelp\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/AppTheme\">\n        <activity\n            android:name=\".VolunteerLoginActivity\"\n            android:label=\"@string/title_activity_volunteer_login\"\n            android:theme=\"@style/AppTheme.NoActionBar\"\n            tools:ignore=\"ExtraText\"\n            android:parentActivityName=\".MainActivity\">\n            <meta-data\n                android:name=\"android.support.PARENT_ACTIVITY\"\n                android:value=\".MainActivity\" />\n        </activity>\n        <activity\n            android:name=\".IsolatingLoginActivity\"\n            android:label=\"IsolatingLoginActivity\"\n            android:theme=\"@style/AppTheme.NoActionBar\"\n            tools:ignore=\"DuplicateActivity,ExtraText\"\n            android:parentActivityName=\".MainActivity\">\n            <meta-data\n                android:name=\"android.support.PARENT_ACTIVITY\"\n                android:value=\".MainActivity\" />\n        </activity>\n        <!--\n             The API key for Google Maps-based APIs is defined as a string resource.\n             (See the file \"res/values/google_maps_api.xml\").\n             Note that the API key is linked to the encryption key used to sign the APK.\n             You need a different API key for each encryption key, including the release key that is used to\n             sign the APK for publishing.\n             You can define the keys for the debug and release targets in src/debug/ and src/release/.\n        -->\n        <meta-data\n            android:name=\"com.google.android.geo.API_KEY\"\n            android:value=\"@string/google_maps_key\"\n            />\n\n        <activity\n            android:name=\".IsolatingMapActivity\"\n            android:label=\"@string/title_activity_isolating_map\" />\n        <activity android:name=\".MainActivity\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n        <activity\n            android:name=\".IsolatingMainActivity\"\n            android:label=\"Isolating Menu\"\n            android:parentActivityName=\".IsolatingLoginActivity\">\n            <meta-data\n                android:name=\"android.support.PARENT_ACTIVITY\"\n                android:value=\".MainActivity\" />\n        </activity>\n        <activity\n            android:name=\".UserTaskAccepted\"\n            android:label=\"User Task Accepted Menu\"\n            android:parentActivityName=\".IsolatingMainActivity\">\n            <meta-data\n                android:name=\"android.support.PARENT_ACTIVITY\"\n                android:value=\".IsolatingMainActivity\" />\n        </activity>\n        <activity\n            android:name=\".VolunteerMainActivity\"\n            android:label=\"Volunteer Menu\"\n            android:parentActivityName=\".VolunteerLoginActivity\">\n            <meta-data\n                android:name=\"android.support.PARENT_ACTIVITY\"\n                android:value=\".VolunteerLoginActivity\" />\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 824acc327445f38fda1af88dec30b0d60606babe)
++++ app/src/main/AndroidManifest.xml	(date 1615076155000)
+@@ -68,12 +68,20 @@
+                 android:value=".MainActivity" />
+         </activity>
+         <activity
+-            android:name=".UserTaskAccepted"
+-            android:label="User Task Accepted Menu"
++            android:name=".AddNewTask"
++            android:label="Add New Task Menu"
+             android:parentActivityName=".IsolatingMainActivity">
+             <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+                 android:value=".IsolatingMainActivity" />
++        </activity>
++        <activity
++            android:name=".UserTaskAccepted"
++            android:label="User Task Accepted Menu"
++            android:parentActivityName=".AddNewTask">
++        <meta-data
++            android:name="android.support.PARENT_ACTIVITY"
++            android:value=".AddNewTask" />
+         </activity>
+         <activity
+             android:name=".VolunteerMainActivity"
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:background=\"#FFFFFF\"\n    android:backgroundTint=\"@color/colorPrimaryDark\"\n    android:backgroundTintMode=\"add\"\n    tools:context=\".MainActivity\" >\n\n    <TextView\n        android:id=\"@+id/textView3\"\n        android:layout_width=\"411dp\"\n        android:layout_height=\"47dp\"\n        android:background=\"#3d9acc\"\n        android:fontFamily=\"sans-serif-black\"\n        android:gravity=\"center_horizontal|fill_vertical\"\n        android:text=\"IsoHelp\"\n        android:textAppearance=\"@style/TextAppearance.AppCompat.Small\"\n        android:textColor=\"#fff\"\n        android:textSize=\"25sp\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n\n    <TextView\n        android:id=\"@+id/editTextTextMultiLine2\"\n        android:layout_width=\"344dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginBottom=\"48dp\"\n        android:ems=\"14\"\n        android:gravity=\"center_horizontal\"\n        android:inputType=\"textMultiLine\"\n        android:text=\"Hi there!\\nWelcome to IsoHelp\"\n        android:textColor=\"#3d9acc\"\n        android:textSize=\"30sp\"\n        app:layout_constraintBottom_toTopOf=\"@+id/editTextTextMultiLine\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintHorizontal_bias=\"0.492\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toBottomOf=\"@+id/textView3\"\n        app:layout_constraintVertical_bias=\"1.0\"\n        tools:ignore=\"MissingConstraints\" />\n\n    <TextView\n        android:id=\"@+id/editTextTextMultiLine\"\n        android:layout_width=\"367dp\"\n        android:layout_height=\"88dp\"\n        android:layout_marginBottom=\"60dp\"\n        android:ems=\"14\"\n        android:gravity=\"center_horizontal\"\n        android:inputType=\"textMultiLine\"\n        android:text=\"Let's get started\\n\\nI am a:\"\n        android:textSize=\"20sp\"\n        app:layout_constraintBottom_toTopOf=\"@+id/isolatingButton\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintHorizontal_bias=\"0.488\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        tools:ignore=\"MissingConstraints\" />\n    <Button\n        android:id=\"@+id/volunteerButton\"\n        android:layout_width=\"236dp\"\n        android:layout_height=\"50dp\"\n        android:layout_marginBottom=\"120dp\"\n        android:backgroundTint=\"#3d9acc\"\n        android:text=\"NHS Volunteer\"\n        android:textColor=\"#ffffff\"\n        android:background=\"@drawable/rounded_corners\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintHorizontal_bias=\"0.502\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        tools:ignore=\"MissingConstraints\" />\n    <Button\n        android:id=\"@+id/isolatingButton\"\n        android:layout_width=\"236dp\"\n        android:layout_height=\"50dp\"\n        android:layout_marginBottom=\"40dp\"\n        android:backgroundTint=\"#3d9acc\"\n        android:textColor=\"#ffffff\"\n        android:text=\"Isolating User\"\n        android:background=\"@drawable/rounded_corners\"\n        app:layout_constraintBottom_toTopOf=\"@+id/volunteerButton\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintHorizontal_bias=\"0.497\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        tools:ignore=\"MissingConstraints\" />\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 824acc327445f38fda1af88dec30b0d60606babe)
++++ app/src/main/res/layout/activity_main.xml	(date 1615076488000)
+@@ -52,7 +52,7 @@
+         android:ems="14"
+         android:gravity="center_horizontal"
+         android:inputType="textMultiLine"
+-        android:text="Let's get started\n\nI am a:"
++        android:text="Let's get started\n\nI am a / an:"
+         android:textSize="20sp"
+         app:layout_constraintBottom_toTopOf="@+id/isolatingButton"
+         app:layout_constraintEnd_toEndOf="parent"
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_7\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 824acc327445f38fda1af88dec30b0d60606babe)
++++ .idea/misc.xml	(date 1615071660000)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/java/com/example/hackherthon/IsolatingMainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.hackherthon;\n\nimport androidx.appcompat.app.AppCompatActivity;\n\nimport android.content.Intent;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.widget.ArrayAdapter;\nimport android.widget.Button;\nimport android.widget.Spinner;\n\npublic class IsolatingMainActivity extends AppCompatActivity {\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.isolating_main);\n\n        Button nextTask = (Button) findViewById(R.id.addNextTask);\n\n        //add the onClick listener\n        nextTask.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                Intent acceptedTaskIntent = new Intent(IsolatingMainActivity.this, UserTaskAccepted.class);\n\n                startActivity(acceptedTaskIntent);\n            }\n        });\n\n\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hackherthon/IsolatingMainActivity.java	(revision 824acc327445f38fda1af88dec30b0d60606babe)
++++ app/src/main/java/com/example/hackherthon/IsolatingMainActivity.java	(date 1615076155000)
+@@ -22,9 +22,8 @@
+         nextTask.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+-                Intent acceptedTaskIntent = new Intent(IsolatingMainActivity.this, UserTaskAccepted.class);
+-
+-                startActivity(acceptedTaskIntent);
++                Intent addNewTaskIntent = new Intent(IsolatingMainActivity.this, AddNewTask.class);
++                startActivity(addNewTaskIntent);
+             }
+         });
+ 
+Index: app/src/main/res/layout/add_new_task.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/add_new_task.xml	(date 1615076488000)
++++ app/src/main/res/layout/add_new_task.xml	(date 1615076488000)
+@@ -0,0 +1,288 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <TextView
++        android:id="@+id/textView4"
++        android:layout_width="411dp"
++        android:layout_height="47dp"
++        android:background="#3d9acc"
++        android:fontFamily="sans-serif-black"
++        android:gravity="center_horizontal|fill_vertical"
++        android:paddingLeft="10dp"
++        android:text="@string/isohelp1"
++        android:textAppearance="@style/TextAppearance.AppCompat.Small"
++        android:textColor="#fff"
++        android:textSize="25sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/addNewTaskView"
++        android:layout_width="326dp"
++        android:layout_height="62dp"
++        android:layout_marginTop="76dp"
++        android:fontFamily="sans-serif-black"
++        android:paddingLeft="10dp"
++        android:text="@string/add_your_wished_task"
++        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++        android:textColor="@android:color/holo_blue_dark"
++        android:textSize="28sp"
++        android:textStyle="bold"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.082"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="@+id/textView4"
++        tools:ignore="MissingConstraints" />
++
++    <TextView
++        android:id="@+id/taskTypeView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="sans-serif"
++        android:paddingLeft="10dp"
++        android:text="Task type:"
++        android:textColor="@android:color/black"
++        android:textSize="20dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.054"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.18"
++        tools:ignore="MissingConstraints" />
++
++    <CheckBox
++        android:id="@+id/checkBoxGroceries"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="sans-serif-medium"
++        android:paddingLeft="10dp"
++        android:text="Groceries"
++        android:textSize="16dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.14"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.237"
++        tools:ignore="MissingConstraints" />
++
++    <CheckBox
++        android:id="@+id/checkBoxWalkPet"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="sans-serif-medium"
++        android:paddingLeft="10dp"
++        android:text="@string/walk_pet"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.137"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.329"
++        tools:ignore="MissingConstraints"
++        tools:textSize="16sp" />
++
++    <CheckBox
++        android:id="@+id/checkBoxMedication"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="sans-serif-medium"
++        android:paddingLeft="10dp"
++        android:text="@string/medication"
++        android:textSize="16sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.145"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.283"
++        tools:ignore="MissingConstraints" />
++
++    <CheckBox
++        android:id="@+id/checkBoxOther"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="sans-serif-medium"
++        android:paddingLeft="10dp"
++        android:text="@string/other"
++        android:textSize="16sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.127"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.374"
++        tools:ignore="MissingConstraints" />
++
++    <EditText
++        android:id="@+id/editTextTask"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:autofillHints="ex: Send flowers"
++        android:ems="10"
++        android:fontFamily="sans-serif-light"
++        android:hint="@string/enter_custom_task"
++        android:inputType="textPersonName"
++        android:paddingLeft="10dp"
++        android:textSize="14sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.234"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.425"
++        tools:ignore="MissingConstraints" />
++
++    <TextView
++        android:id="@+id/locationTestView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="sans-serif"
++        android:paddingLeft="10dp"
++        android:text="@string/your_location"
++        android:textColor="@android:color/black"
++        android:textSize="20sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.062"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.492" />
++
++    <EditText
++        android:id="@+id/introduceStreet"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:ems="10"
++        android:fontFamily="sans-serif-light"
++        android:hint="@string/street_no"
++        android:inputType="text|textPostalAddress"
++        android:paddingLeft="10dp"
++        android:textSize="14sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.234"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.541" />
++
++    <EditText
++        android:id="@+id/introduceCity"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:ems="10"
++        android:fontFamily="sans-serif-light"
++        android:hint="@string/city"
++        android:inputType="textPostalAddress"
++        android:paddingLeft="10dp"
++        android:textSize="14sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.234"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.6" />
++
++    <EditText
++        android:id="@+id/introducePostcode"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:ems="10"
++        android:fontFamily="sans-serif-light"
++        android:hint="@string/postcode"
++        android:inputType="textPostalAddress"
++        android:paddingLeft="10dp"
++        android:textSize="14sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.234"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.658"
++        tools:textSize="14sp" />
++
++    <TextView
++        android:id="@+id/dueTextView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="sans-serif"
++        android:paddingLeft="10dp"
++        android:text="@string/due_time"
++        android:textColor="@color/common_google_signin_btn_text_dark_focused"
++        android:textSize="20sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.054"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.72" />
++
++    <Spinner
++        android:id="@+id/spinner2"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:paddingLeft="10dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.721"
++        tools:ignore="MissingConstraints" />
++
++    <TextView
++        android:id="@+id/commentsView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:fontFamily="sans-serif"
++        android:text="  Comments: "
++        android:textColor="@android:color/black"
++        android:textSize="20sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.054"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.786" />
++
++    <EditText
++        android:id="@+id/commentsEdit"
++        android:layout_width="163dp"
++        android:layout_height="40dp"
++        android:layout_marginBottom="8dp"
++        android:ems="10"
++        android:fontFamily="sans-serif-light"
++        android:hint="Add any comment"
++        android:inputType="textPersonName"
++        android:textSize="14sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.54"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.801" />
++
++    <Button
++        android:id="@+id/submitTaskButton"
++        android:layout_width="236dp"
++        android:layout_height="50dp"
++        android:background="@drawable/rounded_corners"
++        android:backgroundTint="#3d9acc"
++        android:fontFamily="sans-serif-black"
++        android:text="@string/submit"
++        android:textColor="@android:color/white"
++        android:textSize="22sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.497"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.892" />
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/hackherthon/AddNewTask.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hackherthon/AddNewTask.java	(date 1615076696000)
++++ app/src/main/java/com/example/hackherthon/AddNewTask.java	(date 1615076696000)
+@@ -0,0 +1,77 @@
++package com.example.hackherthon;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.AdapterView;
++import android.widget.AdapterView.OnItemSelectedListener;
++import android.widget.ArrayAdapter;
++import android.widget.Button;
++import android.widget.Spinner;
++import android.widget.Toast;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import java.util.ArrayList;
++import java.util.List;
++
++public class AddNewTask extends AppCompatActivity implements OnItemSelectedListener{
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.add_new_task);
++
++        Button nextTaskSubmit = (Button) findViewById(R.id.submitTaskButton);
++
++        //add the onClick listener
++        nextTaskSubmit.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Intent acceptedTaskIntent = new Intent(AddNewTask.this, UserTaskAccepted.class);
++                startActivity(acceptedTaskIntent);
++            }
++        });
++
++        // Spinner element
++        Spinner spinner = (Spinner) findViewById(R.id.spinner2);
++
++        // Spinner click listener
++        spinner.setOnItemSelectedListener((OnItemSelectedListener) this);
++
++        // Spinner Drop down elements
++        List<String> categories = new ArrayList<String>();
++        categories.add("Now");
++        categories.add("10:00");
++        categories.add("11:00");
++        categories.add("12:00");
++        categories.add("13:00");
++        categories.add("14:00");
++        categories.add("15:00");
++        categories.add("16:00");
++        categories.add("17:00");
++        categories.add("18:00");
++        categories.add("19:00");
++        setContentView(R.layout.add_new_task);
++
++        // Creating adapter for spinner
++        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
++
++        // Drop down layout style - list view with radio button
++        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
++
++    }
++
++    @Override
++    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
++        // On selecting a spinner item
++        String item = parent.getItemAtPosition(position).toString();
++
++        // Showing selected spinner item
++        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
++    }
++    public void onNothingSelected(AdapterView<?> arg0) {
++        // TODO Auto-generated method stub
++
++    }
++}

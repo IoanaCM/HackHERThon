@@ -65,7 +65,7 @@
         </activity>
         <activity
             android:name=".AddNewTask"
-            android:label="Add New Task Menu"
+            android:label="Add New Task"
             android:parentActivityName=".IsolatingMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -73,7 +73,7 @@
         </activity>
         <activity
             android:name=".UserTaskAccepted"
-            android:label="User Task Accepted Menu"
+            android:label="User Task Accepted"
             android:parentActivityName=".AddNewTask">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"

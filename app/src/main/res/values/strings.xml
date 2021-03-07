@@ -17,16 +17,16 @@
     <string name="text_volunteerpendingtasks">Pending</string>
     <string name="text_volunteercompletedtasks">Complete</string>
     <string name="settings">Settings</string>
-    <string name="submit" />
+    <string name="submit">Submit</string>
     <string name="add_any_comment">Add any comment</string>
-    <string name="comments">Comments:</string>
-    <string name="due_time">dueTime</string>
-    <string name="postcode">postcode</string>
-    <string name="city">city</string>
-    <string name="street_no">streetNo</string>
-    <string name="your_location">location</string>
-    <string name="enter_custom_task">customTask</string>
-    <string name="medication">medication</string>
+    <string name="comments">  Comments:</string>
+    <string name="due_time">Due Time</string>
+    <string name="postcode">Postcode</string>
+    <string name="city">City</string>
+    <string name="street_no">Street, No</string>
+    <string name="your_location">Location</string>
+    <string name="enter_custom_task">Custom Task</string>
+    <string name="medication">Medication</string>
     <string name="isohelp" />
     <string name="other">Other</string>
     <string name="walk_pet">Walk Pet</string>
@@ -35,4 +35,24 @@
     <string name="add_new_task">Add New Task</string>
     <string name="groceries">Groceries</string>
     <string name="task_type">Task type:</string>
+
+    <string-array name="spinner_hours">
+        <item>Now</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>21:00</item>
+        <item>21:00</item>
+        <item>23:00</item>
+        <item>24:00</item>
+    </string-array>
 </resources>
