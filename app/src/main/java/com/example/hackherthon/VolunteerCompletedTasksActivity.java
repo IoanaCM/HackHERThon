@@ -37,6 +37,7 @@ public class VolunteerCompletedTasksActivity extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.volunteer_searchtask:
                                 Intent searchIntent = new Intent(VolunteerCompletedTasksActivity.this, VolunteerSearchActivity.class);
+                                startActivity(searchIntent);
                                 break;
 
                             case R.id.volunteer_pendingtasks:
