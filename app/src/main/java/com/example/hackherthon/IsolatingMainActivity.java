@@ -48,9 +48,8 @@ public class IsolatingMainActivity extends AppCompatActivity {
         nextTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent acceptedTaskIntent = new Intent(IsolatingMainActivity.this, UserTaskAccepted.class);
-
-                startActivity(acceptedTaskIntent);
+                Intent addNewTaskIntent = new Intent(IsolatingMainActivity.this, AddNewTask.class);
+                startActivity(addNewTaskIntent);
             }
         });*/
 
