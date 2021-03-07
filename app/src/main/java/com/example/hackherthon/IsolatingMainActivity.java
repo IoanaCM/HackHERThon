@@ -21,7 +21,6 @@ public class IsolatingMainActivity extends AppCompatActivity {
         setContentView(R.layout.task_status);
 
         ImageButton settingsButton = (ImageButton) findViewById(R.id.isolating_settings);
-
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
