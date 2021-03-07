@@ -1,16 +1,55 @@
 package com.example.hackherthon;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class CompletedVolunteerTasksActivity extends AppCompatActivity {
+
+    private BottomNavigationView navView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.volunteer_completed_tasks);
+
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.volunteer_settings);
+        settingsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(CompletedVolunteerTasksActivity.this, VolunteerSettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        navView = (BottomNavigationView) findViewById(R.id.volunteer_bottom_navigation);
+        navView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.volunteer_searchtask:
+                                Intent searchIntent = new Intent(CompletedVolunteerTasksActivity.this, VolunteerSearchActivity.class);
+                                startActivity(searchIntent);
+                                break;
+
+                            case R.id.volunteer_pendingtasks:
+                                Intent pendingIntent = new Intent(CompletedVolunteerTasksActivity.this, VolunteerMainActivity.class);
+                                startActivity(pendingIntent);
+                                break;
+
+                            case R.id.volunteer_completedtasks:
+                                break;
+                        }
+                        return false;
+                    }
+                });
     }
-
-
-
 }

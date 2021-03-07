@@ -7,7 +7,7 @@
     android:background="#FFFFFF"
     android:backgroundTint="@color/colorPrimaryDark"
     android:backgroundTintMode="add"
-    tools:context=".VolunteerCompletedTasksActivity" >
+    tools:context=".CompletedUserTasksActivity" >
 
     <TextView
         android:id="@+id/textView3"
@@ -308,7 +308,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/volunteer_settings"
+        android:id="@+id/isolating_settings"
         android:layout_width="60dp"
         android:layout_height="50dp"
         android:background="#00FFFFFF"
@@ -319,7 +319,7 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/volunteer_bottom_navigation"
+        android:id="@+id/isolating_bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -329,7 +329,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/volunteer_navigation_menu" />
+        app:menu="@menu/isolating_navigation_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

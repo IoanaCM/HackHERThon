@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class VolunteerCompletedTasksActivity extends AppCompatActivity {
+public class CompletedUserTasksActivity extends AppCompatActivity {
 
     private BottomNavigationView navView;
 
@@ -20,32 +20,32 @@ public class VolunteerCompletedTasksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.users_completed_tasks);
 
-        ImageButton settingsButton = (ImageButton) findViewById(R.id.volunteer_settings);
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.isolating_settings);
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(VolunteerCompletedTasksActivity.this, VolunteerSettingsActivity.class);
+                Intent intent = new Intent(CompletedUserTasksActivity.this, IsolatingSettingsActivity.class);
                 startActivity(intent);
             }
         });
 
-        navView = (BottomNavigationView) findViewById(R.id.volunteer_bottom_navigation);
+        navView = (BottomNavigationView) findViewById(R.id.isolating_bottom_navigation);
         navView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
-                            case R.id.volunteer_searchtask:
-                                Intent searchIntent = new Intent(VolunteerCompletedTasksActivity.this, VolunteerSearchActivity.class);
+                            case R.id.isolating_newtask:
+                                Intent searchIntent = new Intent(CompletedUserTasksActivity.this, AddNewTask.class);
                                 startActivity(searchIntent);
                                 break;
 
-                            case R.id.volunteer_pendingtasks:
-                                Intent pendingIntent = new Intent(VolunteerCompletedTasksActivity.this, VolunteerMainActivity.class);
+                            case R.id.isolating_pendingtasks:
+                                Intent pendingIntent = new Intent(CompletedUserTasksActivity.this, IsolatingMainActivity.class);
                                 startActivity(pendingIntent);
                                 break;
 
-                            case R.id.volunteer_completedtasks:
+                            case R.id.isolating_completedtasks:
                                 break;
                         }
                         return false;

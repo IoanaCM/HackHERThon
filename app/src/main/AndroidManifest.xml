@@ -109,7 +109,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".IsolatingMainActivity" />
         </activity>
-        <activity android:name=".VolunteerCompletedTasksActivity"
+        <activity android:name=".CompletedUserTasksActivity"
+            android:label="User Completed Tasks"
+            android:parentActivityName=".IsolatingMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IsolatingMainActivity" />
+        </activity>
+        <activity android:name=".CompletedVolunteerTasksActivity"
             android:label="Volunteer Completed Tasks"
             android:parentActivityName=".VolunteerMainActivity">
             <meta-data
