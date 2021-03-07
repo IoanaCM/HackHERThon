@@ -50,9 +50,7 @@ public class VolunteerMapActivity extends FragmentActivity implements OnMapReady
             mLogout.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            boolean isLoggingOut = true;
 
-      //      disconnectVolunteer();
 
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(VolunteerMapActivity.this, MainActivity.class);
@@ -70,16 +68,6 @@ public class VolunteerMapActivity extends FragmentActivity implements OnMapReady
         }
     });}
 
-//    private void disconnectVolunteer(){
-//        if(mFusedLocationClient != null){
-//            mFusedLocationClient.removeLocationUpdates(mLocationCallback);
-//        }
-//        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-//        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("volunteersAvailable");
-//
-//        GeoFire geoFire = new GeoFire(ref);
-//        geoFire.removeLocation(userId);
-//    }
 
     /**
      * Manipulates the map once available.

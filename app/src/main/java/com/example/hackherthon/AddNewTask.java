@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -15,11 +17,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddNewTask extends AppCompatActivity implements OnItemSelectedListener{
+public class AddNewTask extends AppCompatActivity implements OnItemSelectedListener {
+
+    private FirebaseAuth mAuth;
+    private DatabaseReference mTasksDatabase;
+    private String userID;
+
+    private CheckBox
+    private EditText mStreet, mCity, mPostcode, mComments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +42,13 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
         Button nextTaskSubmit = (Button) findViewById(R.id.submitTaskButton);
 
         //add the onClick listener
-        nextTaskSubmit.setOnClickListener(new View.OnClickListener(){
+        nextTaskSubmit.setOnClickListener(new View.OnClickListener() {
             // TODO: Link submit button to UserTaskAccepted
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
+                mAuth = FirebaseAuth.getInstance();
+                userID = mAuth.getCurrentUser().getUid();
+                mTasksDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Tasks");
                 Intent acceptedTaskIntent = new Intent(AddNewTask.this, UserTaskAccepted.class);
 
                 startActivity(acceptedTaskIntent);
@@ -87,6 +102,7 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
             Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
         }
     }
+
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
 

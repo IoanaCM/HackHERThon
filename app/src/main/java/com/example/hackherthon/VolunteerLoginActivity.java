@@ -38,6 +38,7 @@ public class VolunteerLoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(VolunteerLoginActivity.this, VolunteerMainActivity.class);
                     startActivity(intent);
                     finish();
+                    return;
                 }
             }
         };
@@ -92,6 +93,7 @@ public class VolunteerLoginActivity extends AppCompatActivity {
         super.onStart();
         mAuth.addAuthStateListener(firebaseAuthListener);
     }
+
     @Override
     protected void onStop() {
         super.onStop();
