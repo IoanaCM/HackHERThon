@@ -45,7 +45,8 @@ public class IsolatingMainActivity extends AppCompatActivity {
                                 break;
 
                             case R.id.isolating_completedtasks:
-                                // TODO add code to move to Completed Tasks window
+                                Intent completedTasksIntent = new Intent(IsolatingMainActivity.this, CompletedTasksActivity.class);
+                                startActivity(completedTasksIntent);
                                 break;
                         }
                         return false;

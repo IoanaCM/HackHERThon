@@ -24,22 +24,21 @@
         tools:ignore="RtlSymmetry" />
 
     <TextView
-        android:id="@+id/addNewTaskView"
-        android:layout_width="326dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="76dp"
-        android:fontFamily="sans-serif-black"
-        android:paddingStart="10dp"
+        android:id="@+id/textView"
+        android:layout_width="411dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="13dp"
+        android:background="#174D9F"
+        android:gravity="center_horizontal|fill_vertical"
         android:text="@string/add_your_wished_task"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="28sp"
+        android:textColor="#FFF"
+        android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
-        tools:ignore="MissingConstraints,RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.001" />
 
     <TextView
         android:id="@+id/taskTypeView"
@@ -280,7 +279,7 @@
         android:background="@drawable/rounded_corners"
         android:backgroundTint="#3d9acc"
         android:fontFamily="sans-serif-black"
-        android:text="@string/submit"
+        android:text="Submit"
         android:textColor="@android:color/white"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
