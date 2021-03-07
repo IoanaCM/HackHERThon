@@ -3,8 +3,11 @@ package com.example.hackherthon;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,6 +20,14 @@ public class IsolatingMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.task_status);
 
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.isolating_settings);
+
+        settingsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                // TODO add intent to move to Isolating User Settings
+            }
+        });
 
         navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 

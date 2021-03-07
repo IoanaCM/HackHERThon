@@ -16,4 +16,5 @@
     <string name="text_volunteersearchtask">Search</string>
     <string name="text_volunteerpendingtasks">Pending</string>
     <string name="text_volunteercompletedtasks">Complete</string>
+    <string name="settings">Settings</string>
 </resources>

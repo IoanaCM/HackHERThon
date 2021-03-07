@@ -82,6 +82,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".VolunteerLoginActivity" />
         </activity>
+        <activity
+            android:name=".VolunteerSettingsActivity"
+            android:label="Volunteer Settings"
+            android:parentActivityName=".VolunteerMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".VolunteerMainActivity" />
+        </activity>
+
     </application>
 
 </manifest>

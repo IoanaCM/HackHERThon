@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,6 +19,16 @@ public class VolunteerMainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.volunteer_main);
+
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.volunteer_settings);
+
+        settingsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(VolunteerMainActivity.this, VolunteerSettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 
