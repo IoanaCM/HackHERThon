@@ -66,6 +66,7 @@
         </activity>
         <activity
             android:name=".AddNewTask"
+            android:label="Add New Task"
             android:parentActivityName=".IsolatingMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
