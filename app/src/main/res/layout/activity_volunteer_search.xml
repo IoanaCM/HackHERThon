@@ -65,7 +65,7 @@
 
     <LinearLayout
         android:layout_width="403dp"
-        android:layout_height="616dp"
+        android:layout_height="586dp"
         android:layout_marginTop="4dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/volunteer_bottom_navigation"
@@ -93,6 +93,7 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="5dp"
             tools:layout_editor_absoluteY="324dp" />
+
         <TextView
             android:id="@+id/taskTypeView"
             android:layout_width="wrap_content"
