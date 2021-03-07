@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         volunteer.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent volunteerMainIntent = new Intent(MainActivity.this, VolunteerLoginActivity.class);
+                Intent volunteerMainIntent = new Intent(MainActivity.this, VolunteerMainActivity.class);
 
                 startActivity(volunteerMainIntent);
             }
