@@ -1,10 +1,12 @@
 package com.example.hackherthon;
 
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,7 +39,6 @@ public class VolunteerSettingsActivity extends AppCompatActivity {
 
     private Button mBack, mConfirm;
 
-
     private FirebaseAuth mAuth;
     private DatabaseReference mVolunteerDatabase;
 
@@ -46,6 +48,7 @@ public class VolunteerSettingsActivity extends AppCompatActivity {
 
     private RadioGroup mRadioGroup;
 
+    private BottomNavigationView navView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +81,29 @@ public class VolunteerSettingsActivity extends AppCompatActivity {
                 return;
             }
         });
+
+        navView = (BottomNavigationView) findViewById(R.id.volunteer_bottom_navigation);
+        navView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.volunteer_searchtask:
+                                // TODO add code to move to Search window
+                                break;
+
+                            case R.id.volunteer_pendingtasks:
+                                Intent pendingIntent = new Intent(VolunteerSettingsActivity.this, VolunteerMainActivity.class);
+                                startActivity(pendingIntent);
+                                break;
+
+                            case R.id.volunteer_completedtasks:
+                                // TODO add code to move to Completed Tasks window
+                                break;
+                        }
+                        return false;
+                    }
+                });
     }
     private void getUserInfo(){
         mVolunteerDatabase.addValueEventListener(new ValueEventListener() {

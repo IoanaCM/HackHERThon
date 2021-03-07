@@ -31,8 +31,6 @@ public class VolunteerMainActivity extends AppCompatActivity{
             }
         });
 
-        navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
-
         Button view1 = (Button) findViewById(R.id.btn_act2);
 
         view1.setOnClickListener(new View.OnClickListener(){
@@ -42,6 +40,7 @@ public class VolunteerMainActivity extends AppCompatActivity{
             }
         });
 
+        navView = (BottomNavigationView) findViewById(R.id.volunteer_bottom_navigation);
         navView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override

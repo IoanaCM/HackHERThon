@@ -67,7 +67,7 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        navView = (BottomNavigationView) findViewById(R.id.isolating_bottom_navigation);
 
         navView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {

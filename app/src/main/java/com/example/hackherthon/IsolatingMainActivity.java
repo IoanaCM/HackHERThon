@@ -25,11 +25,12 @@ public class IsolatingMainActivity extends AppCompatActivity {
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                // TODO add intent to move to Isolating User Settings
+                Intent intent = new Intent(IsolatingMainActivity.this, IsolatingSettingsActivity.class);
+                startActivity(intent);
             }
         });
 
-        navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        navView = (BottomNavigationView) findViewById(R.id.isolating_bottom_navigation);
 
         navView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {

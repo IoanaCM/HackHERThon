@@ -1,62 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hackherthon.VolunteerSettingsActivity"
-    android:orientation="vertical"
-    android:padding="20sp">
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/colorPrimaryDark"
+    android:backgroundTintMode="add"
+    tools:context="com.example.hackherthon.VolunteerSettingsActivity">
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:hint="Name"
-        android:layout_marginBottom="20sp"/>
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:hint="Phone"
-        android:layout_marginBottom="20sp"
-        android:inputType="number"/>
 
-    <RadioGroup
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioGroup"
-        android:orientation="horizontal">
-        <RadioButton
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20sp">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Grocery Delivery"
-            android:id="@+id/GroceryDelivery"/>
-        <RadioButton
-            android:layout_width="wrap_content"
+            android:background="@null"
+            android:hint="Name"
+            android:layout_marginBottom="20sp"/>
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Parcel Pick Up"
-            android:id="@+id/ParcelPickUp"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dog walking"
-            android:id="@+id/DogWalking"/>
-    </RadioGroup>
+            android:background="@null"
+            android:hint="Phone"
+            android:layout_marginBottom="20sp"
+            android:inputType="number"/>
 
-    <Button
-        android:id="@+id/confirm"
-        android:paddingTop="5dp"
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grocery Delivery"
+                android:id="@+id/GroceryDelivery"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parcel Pick Up"
+                android:id="@+id/ParcelPickUp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dog walking"
+                android:id="@+id/DogWalking"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/confirm"
+            android:paddingTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="confirm" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="back" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/volunteer_bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="confirm" />
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/isolating_navigation_menu" />
 
-    <Button
-        android:id="@+id/back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="back" />
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

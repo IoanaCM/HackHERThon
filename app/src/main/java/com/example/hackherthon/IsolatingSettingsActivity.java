@@ -1,10 +1,12 @@
 package com.example.hackherthon;
 
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -47,19 +50,17 @@ public class IsolatingSettingsActivity extends AppCompatActivity {
     private String mAddress;
     private String mService;
 
+    private BottomNavigationView navView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_isolating_settings);
 
-
         mNameField = (EditText) findViewById(R.id.name);
         mPhoneField = (EditText) findViewById(R.id.phone);
         mAddressField = (EditText) findViewById(R.id.address);
         mRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-
-
 
         mBack = (Button) findViewById(R.id.back);
         mConfirm = (Button) findViewById(R.id.confirm);
@@ -69,7 +70,6 @@ public class IsolatingSettingsActivity extends AppCompatActivity {
         mIsolatingDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("IsolatingUsers").child(userID);
 
         getUserInfo();
-
 
         mConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +85,31 @@ public class IsolatingSettingsActivity extends AppCompatActivity {
                 return;
             }
         });
+
+        navView = (BottomNavigationView) findViewById(R.id.isolating_bottom_navigation);
+
+        navView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.isolating_newtask:
+                                Intent isolatingIntent = new Intent(IsolatingSettingsActivity.this, AddNewTask.class);
+                                startActivity(isolatingIntent);
+                                break;
+
+                            case R.id.isolating_pendingtasks:
+                                Intent pendingIntent = new Intent(IsolatingSettingsActivity.this, IsolatingMainActivity.class);
+                                startActivity(pendingIntent);
+                                break;
+
+                            case R.id.isolating_completedtasks:
+                                // TODO add code to move to Completed Tasks window
+                                break;
+                        }
+                        return false;
+                    }
+                });
     }
 
     private void getUserInfo() {
@@ -112,7 +137,6 @@ public class IsolatingSettingsActivity extends AppCompatActivity {
         });
     }
 
-
     private void saveUserInformation() {
         mName = mNameField.getText().toString();
         mPhone = mPhoneField.getText().toString();
@@ -131,8 +155,5 @@ public class IsolatingSettingsActivity extends AppCompatActivity {
         userInfo.put("address", mAddress);
 
         mIsolatingDatabase.updateChildren(userInfo);
-
-
     }
-
 }

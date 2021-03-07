@@ -95,6 +95,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".VolunteerMainActivity" />
         </activity>
+        <activity
+            android:name=".IsolatingSettingsActivity"
+            android:label="Isolating User Settings"
+            android:parentActivityName=".IsolatingMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IsolatingMainActivity" />
+        </activity>
 
     </application>
 
