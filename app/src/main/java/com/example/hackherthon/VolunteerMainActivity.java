@@ -29,7 +29,7 @@ public class VolunteerMainActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
+/*
         Button view1 = (Button) findViewById(R.id.btn_act2);
 
         view1.setOnClickListener(new View.OnClickListener(){
@@ -37,7 +37,7 @@ public class VolunteerMainActivity extends AppCompatActivity{
             public void onClick(View view){
                 openDialog();
             }
-        });
+        });*/
 
         navView = (BottomNavigationView) findViewById(R.id.volunteer_bottom_navigation);
         navView.setOnNavigationItemSelectedListener(
@@ -46,26 +46,26 @@ public class VolunteerMainActivity extends AppCompatActivity{
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.volunteer_searchtask:
-                                Intent searchIntent = new Intent(VolunteerMainActivity.this, VolunteerSearchActivity.class);
-                                startActivity(searchIntent);
+                                Intent intent = new Intent(VolunteerMainActivity.this, VolunteerSearchActivity.class);
+                                startActivity(intent);
                                 break;
 
                             case R.id.volunteer_pendingtasks:
                                 break;
 
                             case R.id.volunteer_completedtasks:
-                                Intent completedIntent = new Intent(VolunteerMainActivity.this, CompletedVolunteerTasksActivity.class);
-                                startActivity(completedIntent);
+                                Intent completedTasksIntent = new Intent(VolunteerMainActivity.this, CompletedVolunteerTasksActivity.class);
+                                startActivity(completedTasksIntent);
                                 break;
                         }
                         return false;
                     }
                 });
     }
-
+/*
     public void openDialog() {
         ViewTaskDialog dialog = new ViewTaskDialog();
         dialog.show(getSupportFragmentManager(), "taskDialog");
-    }
+    }*/
 
 }

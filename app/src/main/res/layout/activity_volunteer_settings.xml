@@ -9,7 +9,7 @@
     android:background="#FFFFFF"
     android:backgroundTint="@color/colorPrimaryDark"
     android:backgroundTintMode="add"
-    tools:context="com.example.hackherthon.VolunteerSettingsActivity">
+    tools:context=".VolunteerSettingsActivity">
 
 
     <LinearLayout
