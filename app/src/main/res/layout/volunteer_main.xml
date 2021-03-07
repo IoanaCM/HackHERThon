@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hackherthon.VolunteerMainActivity">
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/colorPrimaryDark"
+    android:backgroundTintMode="add"
+    tools:context="com.example.hackherthon.VolunteerMainActivity"
+    >
 
     <TextView
         android:id="@+id/textView3"
@@ -17,6 +21,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#fff"
         android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,11 +38,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="411dp"
         android:layout_height="37dp"
-        android:layout_marginTop="8dp"
         android:background="#174D9F"
         android:gravity="center_horizontal|fill_vertical"
         android:text="Accepted Tasks"
