@@ -90,7 +90,8 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
                                 break;
 
                             case R.id.isolating_completedtasks:
-                                // TODO add code to move to Completed Tasks window
+                                Intent cintent = new Intent(AddNewTask.this, CompletedUserTasksActivity.class);
+                                startActivity(cintent);
                                 break;
                         }
                         return false;

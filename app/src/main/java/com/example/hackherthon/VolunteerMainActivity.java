@@ -54,7 +54,7 @@ public class VolunteerMainActivity extends AppCompatActivity{
                                 break;
 
                             case R.id.volunteer_completedtasks:
-                                Intent completedIntent = new Intent(VolunteerMainActivity.this, CompletedUserTasksActivity.class);
+                                Intent completedIntent = new Intent(VolunteerMainActivity.this, CompletedVolunteerTasksActivity.class);
                                 startActivity(completedIntent);
                                 break;
                         }
