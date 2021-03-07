@@ -8,34 +8,24 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class VolunteerMainActivity extends AppCompatActivity{
+public class VolunteerSearchActivity extends AppCompatActivity {
 
     private BottomNavigationView navView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.volunteer_main);
+        setContentView(R.layout.activity_volunteer_search);
 
         ImageButton settingsButton = (ImageButton) findViewById(R.id.volunteer_settings);
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(VolunteerMainActivity.this, VolunteerSettingsActivity.class);
+                Intent intent = new Intent(VolunteerSearchActivity.this, VolunteerSettingsActivity.class);
                 startActivity(intent);
-            }
-        });
-
-        Button view1 = (Button) findViewById(R.id.btn_act2);
-
-        view1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                openDialog();
             }
         });
 
@@ -46,10 +36,11 @@ public class VolunteerMainActivity extends AppCompatActivity{
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.volunteer_searchtask:
-                                Intent searchIntent = new Intent(VolunteerMainActivity.this, VolunteerSearchActivity.class);
                                 break;
 
                             case R.id.volunteer_pendingtasks:
+                                Intent pendingIntent = new Intent(VolunteerSearchActivity.this, VolunteerMainActivity.class);
+                                startActivity(pendingIntent);
                                 break;
 
                             case R.id.volunteer_completedtasks:
@@ -60,10 +51,4 @@ public class VolunteerMainActivity extends AppCompatActivity{
                     }
                 });
     }
-
-    public void openDialog() {
-        ViewTaskDialog dialog = new ViewTaskDialog();
-        dialog.show(getSupportFragmentManager(), "taskDialog");
-    }
-
 }

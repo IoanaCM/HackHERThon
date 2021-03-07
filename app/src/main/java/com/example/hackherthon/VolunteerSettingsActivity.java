@@ -86,7 +86,8 @@ public class VolunteerSettingsActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.volunteer_searchtask:
-                                // TODO add code to move to Search window
+                                Intent searchIntent = new Intent(VolunteerSettingsActivity.this, VolunteerSearchActivity.class);
+                                startActivity(searchIntent);
                                 break;
 
                             case R.id.volunteer_pendingtasks:

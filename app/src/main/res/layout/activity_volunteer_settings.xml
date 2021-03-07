@@ -81,6 +81,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/isolating_navigation_menu" />
+        app:menu="@menu/volunteer_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
