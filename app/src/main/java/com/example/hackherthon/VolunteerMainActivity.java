@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,6 +21,15 @@ public class VolunteerMainActivity extends AppCompatActivity{
         setContentView(R.layout.volunteer_main);
 
         navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+
+        Button view1 = (Button) findViewById(R.id.btn_act2);
+
+        view1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                openDialog();
+            }
+        });
 
         navView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -40,6 +50,11 @@ public class VolunteerMainActivity extends AppCompatActivity{
                         return false;
                     }
                 });
+    }
+
+    public void openDialog() {
+        ViewTaskDialog dialog = new ViewTaskDialog();
+        dialog.show(getSupportFragmentManager(), "taskDialog");
     }
 
 }

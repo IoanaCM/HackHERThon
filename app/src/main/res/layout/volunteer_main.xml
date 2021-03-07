@@ -6,13 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".VolunteerMainActivity">
 
-    <EditText
+    <TextView
         android:id="@+id/taskStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#3d9acc"
         android:ems="10"
-        android:inputType="textPersonName"
         android:padding="15dp"
         android:text="Task Status"
         android:textColor="#ffffff"
@@ -44,7 +43,7 @@
                 android:id="@+id/task1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0001" />
+                android:text="TASK#0001 - User 1" />
 
             <TextView
                 android:id="@+id/taskOutline"
@@ -65,10 +64,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -78,10 +77,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac4"
@@ -90,10 +89,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#8BC34A"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="COMPLETED"
-                    android:textColor="#ffffff" />
+                    android:textColor="#8BC34A" />
 
             </LinearLayout>
 
@@ -107,7 +106,7 @@
                 android:id="@+id/task2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0002" />
+                android:text="TASK#0002 -- User 2" />
 
             <TextView
                 android:id="@+id/taskOutline2"
@@ -128,10 +127,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -141,10 +140,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac7"
@@ -153,10 +152,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#8BC34A"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="COMPLETED"
-                    android:textColor="#ffffff" />
+                    android:textColor="#8BC34A" />
 
             </LinearLayout>
 
@@ -164,14 +163,13 @@
                 android:id="@+id/divider3"
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:background="?android:attr/listDivider"
-                />
+                android:background="?android:attr/listDivider" />
 
             <TextView
                 android:id="@+id/task3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0003" />
+                android:text="TASK#0003 - User 3" />
 
             <TextView
                 android:id="@+id/taskOutline3"
@@ -192,10 +190,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -205,10 +203,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac10"
@@ -217,10 +215,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#8BC34A"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="COMPLETED"
-                    android:textColor="#ffffff" />
+                    android:textColor="#8BC34A" />
 
             </LinearLayout>
 
@@ -234,7 +232,7 @@
                 android:id="@+id/task4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0004" />
+                android:text="TASK#0004 - User 4" />
 
             <TextView
                 android:id="@+id/taskOutline4"
@@ -255,10 +253,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -268,10 +266,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac13"
@@ -280,10 +278,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#8BC34A"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="COMPLETED"
-                    android:textColor="#ffffff" />
+                    android:textColor="#8BC34A" />
 
             </LinearLayout>
 
@@ -297,7 +295,7 @@
                 android:id="@+id/task5"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0005" />
+                android:text="TASK#0005 - User 5" />
 
             <TextView
                 android:id="@+id/taskOutline5"
@@ -312,16 +310,15 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_act24"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -331,10 +328,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac16"
@@ -343,10 +340,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#8BC34A"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="COMPLETED"
-                    android:textColor="#ffffff" />
+                    android:textColor="#8BC34A" />
 
             </LinearLayout>
 
@@ -360,7 +357,7 @@
                 android:id="@+id/task6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0006" />
+                android:text="TASK#0006 - User 6" />
 
             <TextView
                 android:id="@+id/taskOutline6"
@@ -381,10 +378,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -394,10 +391,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac15"
@@ -406,10 +403,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#8BC34A"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="COMPLETED"
-                    android:textColor="#ffffff" />
+                    android:textColor="#8BC34A" />
 
             </LinearLayout>
 
@@ -423,7 +420,7 @@
                 android:id="@+id/task7"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0007" />
+                android:text="TASK#0007 - User 3" />
 
             <TextView
                 android:id="@+id/taskOutline7"
@@ -444,10 +441,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -457,10 +454,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac18"
@@ -469,10 +466,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#8BC34A"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="COMPLETED"
-                    android:textColor="#ffffff" />
+                    android:textColor="#8BC34A" />
 
             </LinearLayout>
 
@@ -486,7 +483,7 @@
                 android:id="@+id/task8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0008" />
+                android:text="TASK#0008 - User 4" />
 
             <TextView
                 android:id="@+id/taskOutline8"
@@ -507,10 +504,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -520,10 +517,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac19"
@@ -532,10 +529,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#8BC34A"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="COMPLETED"
-                    android:textColor="#ffffff" />
+                    android:textColor="#8BC34A" />
 
             </LinearLayout>
 
@@ -549,7 +546,7 @@
                 android:id="@+id/task9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="TASK#0001" />
+                android:text="TASK#0009 - User 2" />
 
             <TextView
                 android:id="@+id/taskOutline9"
@@ -570,10 +567,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#3d9acc"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="View"
-                    android:textColor="#ffffff" />
+                    android:textColor="#3d9acc" />
 
 
                 <Button
@@ -583,10 +580,10 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:backgroundTint="#F44336"
+                    android:backgroundTint="#ffffff"
                     android:padding="5dp"
                     android:text="CANCEL"
-                    android:textColor="#ffffff" />
+                    android:textColor="#F44336" />
 
                 <Button
                     android:id="@+id/btn_ac22"
