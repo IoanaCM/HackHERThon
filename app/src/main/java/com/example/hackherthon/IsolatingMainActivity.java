@@ -21,7 +21,6 @@ public class IsolatingMainActivity extends AppCompatActivity {
         setContentView(R.layout.task_status);
 
         ImageButton settingsButton = (ImageButton) findViewById(R.id.isolating_settings);
-
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -46,8 +45,7 @@ public class IsolatingMainActivity extends AppCompatActivity {
                                 break;
 
                             case R.id.isolating_completedtasks:
-                                Intent completedTasksIntent = new Intent(IsolatingMainActivity.this, CompletedTasksActivity.class);
-                                startActivity(completedTasksIntent);
+                                // TODO add code to move to Isolating User's completed tasks
                                 break;
                         }
                         return false;

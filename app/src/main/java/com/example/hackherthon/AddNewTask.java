@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -39,6 +40,15 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_new_task);
+
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.isolating_settings);
+        settingsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(AddNewTask.this, IsolatingSettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Button nextTaskSubmit = (Button) findViewById(R.id.submitTaskButton);
 
