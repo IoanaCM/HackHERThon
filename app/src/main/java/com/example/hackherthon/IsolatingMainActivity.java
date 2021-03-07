@@ -46,7 +46,7 @@ public class IsolatingMainActivity extends AppCompatActivity {
                                 break;
 
                             case R.id.isolating_completedtasks:
-                                Intent completedTasksIntent = new Intent(IsolatingMainActivity.this, CompletedTasksActivity.class);
+                                Intent completedTasksIntent = new Intent(IsolatingMainActivity.this, VolunteerCompletedTasksActivity.class);
                                 startActivity(completedTasksIntent);
                                 break;
                         }
