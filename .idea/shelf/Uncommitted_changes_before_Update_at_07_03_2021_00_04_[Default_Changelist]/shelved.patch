@@ -1,0 +1,195 @@
+Index: app/src/main/res/layout/activity_isolating_login.xml
+===================================================================
+--- app/src/main/res/layout/activity_isolating_login.xml	(revision 29e54e7fe8b95b0c9d1cdf18685b5c9bdcef8317)
++++ app/src/main/res/layout/activity_isolating_login.xml	(revision 29e54e7fe8b95b0c9d1cdf18685b5c9bdcef8317)
+@@ -1,29 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context="com.example.hackherthon.VolunteerLoginActivity"
+-    android:orientation="vertical">
+-    <EditText
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:hint="email"
+-        android:id="@+id/email"/>
+-    <EditText
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:hint="password"
+-        android:id="@+id/password"/>
+-    <Button
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:text="login"
+-        android:id="@+id/login"/>
+-    <Button
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:text="registration"
+-        android:id="@+id/registration"/>
+-</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_volunteer_login.xml
+===================================================================
+--- app/src/main/res/layout/activity_volunteer_login.xml	(revision 29e54e7fe8b95b0c9d1cdf18685b5c9bdcef8317)
++++ app/src/main/res/layout/activity_volunteer_login.xml	(revision 29e54e7fe8b95b0c9d1cdf18685b5c9bdcef8317)
+@@ -1,29 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context="com.example.hackherthon.VolunteerLoginActivity"
+-    android:orientation="vertical">
+-    <EditText
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:hint="email"
+-        android:id="@+id/email"/>
+-    <EditText
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:hint="password"
+-        android:id="@+id/password"/>
+-    <Button
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:text="login"
+-        android:id="@+id/login"/>
+-    <Button
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:text="registration"
+-        android:id="@+id/registration"/>
+-</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/login_page.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/login_page.xml	(date 1615075348646)
++++ app/src/main/res/layout/login_page.xml	(date 1615075348646)
+@@ -0,0 +1,80 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="@drawable/background"
++    tools:context="com.example.hackherthon.VolunteerLoginActivity"
++    android:orientation="vertical">
++
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="60dp"
++        android:textAppearance="@style/TextAppearance.AppCompat.Large"
++        android:textColor="#fff"
++        android:fontFamily="sans-serif-black"
++        android:text="REGISTER WITH US"
++        android:gravity="center_horizontal|fill_vertical"
++        android:layout_gravity="center"
++        android:layout_marginTop="15dp"/>
++    <Space
++        android:layout_height="10dp"
++        android:layout_width="0dp" />
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="20dp"
++        android:text="Username: "
++        android:textColor="#fff"
++        android:textStyle="bold"
++        android:textSize="18dp"
++        android:paddingLeft="15dp"/>
++
++    <EditText
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:hint="email"
++        android:id="@+id/email"
++        android:paddingLeft="15dp"/>
++    <TextView
++        android:layout_width="wrap_content"
++        android:layout_height="20dp"
++        android:text="Password: "
++        android:textColor="#fff"
++        android:textStyle="bold"
++        android:textSize="18dp"
++        android:paddingLeft="15dp"/>
++    <EditText
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:hint="password"
++        android:paddingLeft="15dp"
++        android:id="@+id/password"/>
++
++    <Space
++        android:layout_height="80dp"
++        android:layout_width="0dp" />
++
++    <Button
++        android:id="@+id/login"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:background="@drawable/rounded_corners"
++        android:backgroundTint="#9BC7DF"
++        android:layout_marginLeft="10dp"
++        android:layout_marginRight="10dp"
++        android:text="login" />
++    <Space
++        android:layout_height="20dp"
++        android:layout_width="0dp" />
++
++    <Button
++        android:id="@+id/registration"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:background="@drawable/rounded_corners"
++        android:backgroundTint="#9BC7DF"
++        android:layout_marginLeft="10dp"
++        android:layout_marginRight="10dp"
++        android:text="registration" />
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/hackherthon/VolunteerLoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.hackherthon;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\nimport android.widget.Toast;\r\n\r\nimport com.google.android.gms.tasks.OnCompleteListener;\r\nimport com.google.android.gms.tasks.Task;\r\nimport com.google.firebase.auth.AuthResult;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.database.*;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\n\r\npublic class VolunteerLoginActivity extends AppCompatActivity {\r\n    private EditText mEmail, mPassword;\r\n    private Button mLogin, mRegistration;\r\n\r\n    private FirebaseAuth mAuth;\r\n    private FirebaseAuth.AuthStateListener firebaseAuthListener;\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_volunteer_login);\r\n\r\n        mAuth = FirebaseAuth.getInstance();\r\n\r\n        firebaseAuthListener = new FirebaseAuth.AuthStateListener() {\r\n            @Override\r\n            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {\r\n                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();\r\n                if(user!=null){\r\n                    Intent intent = new Intent(VolunteerLoginActivity.this, VolunteerMapActivity.class);\r\n                    startActivity(intent);\r\n                    finish();\r\n                }\r\n            }\r\n        };\r\n\r\n        mEmail = (EditText) findViewById(R.id.email);\r\n        mPassword = (EditText) findViewById(R.id.password);\r\n\r\n        mLogin = (Button) findViewById(R.id.login);\r\n        mRegistration = (Button) findViewById(R.id.registration);\r\n\r\n        mRegistration.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                final String email = mEmail.getText().toString();\r\n                final String password = mPassword.getText().toString();\r\n                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(VolunteerLoginActivity.this, new OnCompleteListener<AuthResult>() {\r\n                    @Override\r\n                    public void onComplete(@NonNull Task<AuthResult> task) {\r\n                        if(!task.isSuccessful()){\r\n                            Toast.makeText(VolunteerLoginActivity.this, \"sign up error\", Toast.LENGTH_SHORT).show();\r\n                        }else{\r\n                            String user_id = mAuth.getCurrentUser().getUid();\r\n                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child(\"Users\").child(\"Volunteers\").child(user_id).child(\"name\");\r\n                            current_user_db.setValue(email);\r\n                        }\r\n                    }\r\n                });\r\n            }\r\n        });\r\n\r\n        mLogin.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                final String email = mEmail.getText().toString();\r\n                final String password = mPassword.getText().toString();\r\n                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(VolunteerLoginActivity.this, new OnCompleteListener<AuthResult>() {\r\n                    @Override\r\n                    public void onComplete(@NonNull Task<AuthResult> task) {\r\n                        if(!task.isSuccessful()){\r\n                            Toast.makeText(VolunteerLoginActivity.this, \"sign in error\", Toast.LENGTH_SHORT).show();\r\n                        }\r\n                    }\r\n                });\r\n\r\n            }\r\n        });\r\n    }\r\n\r\n\r\n    @Override\r\n    protected void onStart() {\r\n        super.onStart();\r\n        mAuth.addAuthStateListener(firebaseAuthListener);\r\n    }\r\n    @Override\r\n    protected void onStop() {\r\n        super.onStop();\r\n        mAuth.removeAuthStateListener(firebaseAuthListener);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hackherthon/VolunteerLoginActivity.java	(revision 29e54e7fe8b95b0c9d1cdf18685b5c9bdcef8317)
++++ app/src/main/java/com/example/hackherthon/VolunteerLoginActivity.java	(date 1615075348658)
+@@ -26,7 +26,7 @@
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_volunteer_login);
++        setContentView(R.layout.login_page);
+ 
+         mAuth = FirebaseAuth.getInstance();
+ 
+Index: app/src/main/java/com/example/hackherthon/IsolatingLoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.hackherthon;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.google.android.gms.tasks.OnCompleteListener;\r\nimport com.google.android.gms.tasks.Task;\r\nimport com.google.firebase.auth.AuthResult;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\n\r\npublic class IsolatingLoginActivity extends AppCompatActivity {\r\n    private EditText mEmail, mPassword;\r\n    private Button mLogin, mRegistration;\r\n\r\n    private FirebaseAuth mAuth;\r\n    private FirebaseAuth.AuthStateListener firebaseAuthListener;\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_isolating_login);\r\n\r\n        mAuth = FirebaseAuth.getInstance();\r\n\r\n        firebaseAuthListener = new FirebaseAuth.AuthStateListener() {\r\n            @Override\r\n            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {\r\n                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();\r\n                if(user!=null){\r\n                    Intent intent = new Intent(IsolatingLoginActivity.this, IsolatingMainActivity.class);\r\n                    startActivity(intent);\r\n                    finish();\r\n                    return;\r\n                }\r\n            }\r\n        };\r\n\r\n        mEmail = (EditText) findViewById(R.id.email);\r\n        mPassword = (EditText) findViewById(R.id.password);\r\n\r\n        mLogin = (Button) findViewById(R.id.login);\r\n        mRegistration = (Button) findViewById(R.id.registration);\r\n\r\n        mRegistration.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                final String email = mEmail.getText().toString();\r\n                final String password = mPassword.getText().toString();\r\n                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(IsolatingLoginActivity.this, new OnCompleteListener<AuthResult>() {\r\n                    @Override\r\n                    public void onComplete(@NonNull Task<AuthResult> task) {\r\n                        if(!task.isSuccessful()){\r\n                            Toast.makeText(IsolatingLoginActivity.this, \"sign up error\", Toast.LENGTH_SHORT).show();\r\n                        }else{\r\n                            String user_id = mAuth.getCurrentUser().getUid();\r\n                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child(\"Users\").child(\"IsolatingUsers\").child(user_id);\r\n                            current_user_db.setValue(true);\r\n                        }\r\n                    }\r\n                });\r\n            }\r\n        });\r\n\r\n        mLogin.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                final String email = mEmail.getText().toString();\r\n                final String password = mPassword.getText().toString();\r\n                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(IsolatingLoginActivity.this, new OnCompleteListener<AuthResult>() {\r\n                    @Override\r\n                    public void onComplete(@NonNull Task<AuthResult> task) {\r\n                        if(!task.isSuccessful()){\r\n                            Toast.makeText(IsolatingLoginActivity.this, \"sign in error\", Toast.LENGTH_SHORT).show();\r\n                        }\r\n                    }\r\n                });\r\n\r\n            }\r\n        });\r\n    }\r\n\r\n\r\n    @Override\r\n    protected void onStart() {\r\n        super.onStart();\r\n        mAuth.addAuthStateListener(firebaseAuthListener);\r\n    }\r\n    @Override\r\n    protected void onStop() {\r\n        super.onStop();\r\n        mAuth.removeAuthStateListener(firebaseAuthListener);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hackherthon/IsolatingLoginActivity.java	(revision 29e54e7fe8b95b0c9d1cdf18685b5c9bdcef8317)
++++ app/src/main/java/com/example/hackherthon/IsolatingLoginActivity.java	(date 1615075348653)
+@@ -27,7 +27,7 @@
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_isolating_login);
++        setContentView(R.layout.login_page);
+ 
+         mAuth = FirebaseAuth.getInstance();
+ 
