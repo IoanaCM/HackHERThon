@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -15,11 +17,20 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddNewTask extends AppCompatActivity implements OnItemSelectedListener{
+public class AddNewTask extends AppCompatActivity implements OnItemSelectedListener {
+
+    private FirebaseAuth mAuth;
+    private DatabaseReference mTasksDatabase;
+    private String userID;
+
+    private EditText mStreet, mCity, mPostcode, mComments;
 
     private BottomNavigationView navView;
 
@@ -33,42 +44,28 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
 
         //add the onClick listener
         nextTaskSubmit.setOnClickListener(new View.OnClickListener() {
+            // TODO: Link submit button to UserTaskAccepted
             @Override
             public void onClick(View view) {
+                mAuth = FirebaseAuth.getInstance();
+                userID = mAuth.getCurrentUser().getUid();
+                mTasksDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Tasks");
                 Intent acceptedTaskIntent = new Intent(AddNewTask.this, UserTaskAccepted.class);
+
                 startActivity(acceptedTaskIntent);
             }
         });
 
         // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.spinner2);
-
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.spinner_hours, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Spinner click listener
         spinner.setOnItemSelectedListener((OnItemSelectedListener) this);
-
-        // Spinner Drop down elements
-        List<String> categories = new ArrayList<String>();
-        categories.add("Now");
-        categories.add("10:00");
-        categories.add("11:00");
-        categories.add("12:00");
-        categories.add("13:00");
-        categories.add("14:00");
-        categories.add("15:00");
-        categories.add("16:00");
-        categories.add("17:00");
-        categories.add("18:00");
-        categories.add("19:00");
-        setContentView(R.layout.add_new_task);
-
-        // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
-
-        // Drop down layout style - list view with radio button
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
         navView = (BottomNavigationView) findViewById(R.id.isolating_bottom_navigation);
-
         navView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -89,7 +86,6 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
                         return false;
                     }
                 });
-
     }
 
     @Override
@@ -98,10 +94,14 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
         String item = parent.getItemAtPosition(position).toString();
 
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+        if (item.equals("Now")) {
+            Toast.makeText(parent.getContext(), "Arriving soon", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+        }
     }
+
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
-
     }
 }

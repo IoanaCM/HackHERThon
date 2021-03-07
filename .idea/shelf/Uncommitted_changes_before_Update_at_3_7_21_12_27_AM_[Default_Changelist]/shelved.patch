@@ -1,0 +1,48 @@
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\n    <string name=\"app_name\">HackHERThon</string>\n    <string name=\"title_activity_isolating_map\">Map</string>\n    <string name=\"title_activity_volunteer_login\">VolunteerLoginActivity</string>\n    <!-- Strings used for fragments for navigation -->\n    <string name=\"first_fragment_label\">First Fragment</string>\n    <string name=\"second_fragment_label\">Second Fragment</string>\n    <string name=\"next\">Next</string>\n    <string name=\"previous\">Previous</string>\n\n    <string name=\"hello_first_fragment\">Hello first fragment</string>\n    <string name=\"hello_second_fragment\">Hello second fragment. Arg: %1$s</string>\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision 824acc327445f38fda1af88dec30b0d60606babe)
++++ app/src/main/res/values/strings.xml	(date 1615076155000)
+@@ -10,4 +10,37 @@
+ 
+     <string name="hello_first_fragment">Hello first fragment</string>
+     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
++    <string name="isohelp" />
++    <string name="medication">Medication</string>
++    <string name="other">Other</string>
++    <string name="enter_custom_task">Enter custom task</string>
++    <string name="walk_pet">Walk Pet</string>
++    <string name="add_your_wished_task">Add Your Wished Task</string>
++    <string name="isohelp1">IsoHelp</string>
++    <string name="your_location">Your Location:</string>
++    <string name="street_no">Street, No</string>
++    <string name="city">City</string>
++    <string name="postcode">Postcode</string>
++    <string name="due_time">Due Time:</string>
++    <string name="add_new_task">Add New Task</string>
++    <string name="submit">Submit</string>
++    <string-array name="spinner2">
++        <item>Now</item>
++        <item>08:00</item>
++        <item>09:00</item>
++        <item>10:00</item>
++        <item>11:00</item>
++        <item>12:00</item>
++        <item>13:00</item>
++        <item>14:00</item>
++        <item>15:00</item>
++        <item>16:00</item>
++        <item>17:00</item>
++        <item>18:00</item>
++        <item>19:00</item>
++        <item>21:00</item>
++        <item>21:00</item>
++        <item>23:00</item>
++        <item>24:00</item>
++    </string-array>
+ </resources>
+\ No newline at end of file
