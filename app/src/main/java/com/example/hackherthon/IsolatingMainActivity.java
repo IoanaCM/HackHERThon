@@ -37,7 +37,8 @@ public class IsolatingMainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.isolating_newtask:
-                                // TODO add code to move to Add Task window
+                                Intent intent = new Intent(IsolatingMainActivity.this, AddNewTask.class);
+                                startActivity(intent);
                                 break;
 
                             case R.id.isolating_pendingtasks:

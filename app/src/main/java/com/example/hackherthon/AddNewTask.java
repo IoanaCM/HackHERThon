@@ -2,6 +2,7 @@ package com.example.hackherthon;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -10,12 +11,18 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AddNewTask extends AppCompatActivity implements OnItemSelectedListener{
+
+    private BottomNavigationView navView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -59,6 +66,29 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+
+        navView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.isolating_newtask:
+                                break;
+
+                            case R.id.isolating_pendingtasks:
+                                Intent intent = new Intent(AddNewTask.this, IsolatingMainActivity.class);
+                                startActivity(intent);
+                                break;
+
+                            case R.id.isolating_completedtasks:
+                                // TODO add code to move to Completed Tasks window
+                                break;
+                        }
+                        return false;
+                    }
+                });
 
     }
 
