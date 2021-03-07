@@ -25,20 +25,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="411dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="8dp"
-        android:background="#174D9F"
-        android:gravity="center_horizontal|fill_vertical"
-        android:text="Task Search"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
     <ImageButton
         android:id="@+id/volunteer_settings"
         android:layout_width="60dp"
@@ -64,14 +50,12 @@
 
 
     <LinearLayout
-        android:layout_width="403dp"
-        android:layout_height="586dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="407dp"
+        android:layout_height="570dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/volunteer_bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -94,176 +78,188 @@
             tools:layout_editor_absoluteX="5dp"
             tools:layout_editor_absoluteY="324dp" />
 
-        <TextView
-            android:id="@+id/taskTypeView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:paddingStart="10dp"
-            android:text="@string/task_type"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.054"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.18"
-            tools:ignore="MissingConstraints,RtlSymmetry" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
 
-        <CheckBox
-            android:id="@+id/checkBoxGroceries"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:paddingStart="10dp"
-            android:text="@string/groceries"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.14"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.237"
-            tools:ignore="MissingConstraints,RtlSymmetry" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/checkBoxWalkPet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:paddingStart="10dp"
-            android:text="@string/walk_pet"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.137"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.329"
-            tools:ignore="MissingConstraints,RtlSymmetry" />
+                <TextView
+                    android:id="@+id/taskTypeView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="10dp"
+                    android:text="@string/task_type"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.054"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.18"
+                    tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <CheckBox
-            android:id="@+id/checkBoxMedication"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:paddingStart="10dp"
-            android:text="@string/medication"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.145"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.283"
-            tools:ignore="MissingConstraints,RtlSymmetry" />
+                <CheckBox
+                    android:id="@+id/checkBoxGroceries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="10dp"
+                    android:text="@string/groceries"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.237"
+                    tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <CheckBox
-            android:id="@+id/checkBoxOther"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:paddingStart="10dp"
-            android:text="@string/other"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.127"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.374"
-            tools:ignore="MissingConstraints,RtlSymmetry" />
+                <CheckBox
+                    android:id="@+id/checkBoxWalkPet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="10dp"
+                    android:text="@string/walk_pet"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.137"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.329"
+                    tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <EditText
-            android:id="@+id/editTextTask"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autofillHints="ex: Send flowers"
-            android:ems="10"
-            android:fontFamily="sans-serif-light"
-            android:hint="@string/enter_custom_task"
-            android:inputType="textPersonName"
-            android:paddingStart="10dp"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.234"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.425"
-            tools:ignore="MissingConstraints,RtlHardcoded" />
+                <CheckBox
+                    android:id="@+id/checkBoxMedication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="10dp"
+                    android:text="@string/medication"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.145"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.283"
+                    tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <TextView
-            android:id="@+id/locationTestView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:paddingStart="10dp"
-            android:text="@string/your_location"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.062"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.492"
-            tools:ignore="RtlSymmetry" />
+                <CheckBox
+                    android:id="@+id/checkBoxOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="10dp"
+                    android:text="@string/other"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.127"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.374"
+                    tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <EditText
-            android:id="@+id/introduceStreet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="sans-serif-light"
-            android:hint="@string/street_no"
-            android:inputType="text|textPostalAddress"
-            android:paddingStart="10dp"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.234"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.541"
-            tools:ignore="RtlSymmetry" />
+                <EditText
+                    android:id="@+id/editTextTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="ex: Send flowers"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/enter_custom_task"
+                    android:inputType="textPersonName"
+                    android:paddingStart="10dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.234"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.425"
+                    tools:ignore="MissingConstraints,RtlHardcoded" />
 
-        <EditText
-            android:id="@+id/introduceCity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="sans-serif-light"
-            android:hint="@string/city"
-            android:inputType="textPostalAddress"
-            android:paddingStart="10dp"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.234"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
-            tools:ignore="RtlSymmetry" />
+                <TextView
+                    android:id="@+id/locationTestView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="10dp"
+                    android:text="@string/your_location"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.062"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.492"
+                    tools:ignore="RtlSymmetry" />
 
-        <EditText
-            android:id="@+id/introducePostcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="sans-serif-light"
-            android:hint="@string/postcode"
-            android:inputType="textPostalAddress"
-            android:paddingLeft="10dp"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.234"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.658"
-            tools:textSize="14sp" />
+                <EditText
+                    android:id="@+id/introduceStreet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/street_no"
+                    android:inputType="text|textPostalAddress"
+                    android:paddingStart="10dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.234"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.541"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/introduceCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/city"
+                    android:inputType="textPostalAddress"
+                    android:paddingStart="10dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.234"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/introducePostcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/postcode"
+                    android:inputType="textPostalAddress"
+                    android:paddingLeft="10dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.234"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.658"
+                    tools:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
