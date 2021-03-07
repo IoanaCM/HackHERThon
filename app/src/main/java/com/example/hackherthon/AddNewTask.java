@@ -21,8 +21,6 @@ import java.util.List;
 
 public class AddNewTask extends AppCompatActivity implements OnItemSelectedListener{
 
-    private BottomNavigationView navView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -32,42 +30,27 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
         Button nextTaskSubmit = (Button) findViewById(R.id.submitTaskButton);
 
         //add the onClick listener
-        nextTaskSubmit.setOnClickListener(new View.OnClickListener() {
+        nextTaskSubmit.setOnClickListener(new View.OnClickListener(){
+            // TODO: Link submit button to UserTaskAccepted
             @Override
-            public void onClick(View view) {
+            public void onClick(View view){
                 Intent acceptedTaskIntent = new Intent(AddNewTask.this, UserTaskAccepted.class);
+
                 startActivity(acceptedTaskIntent);
             }
         });
 
         // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.spinner2);
-
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.spinner_hours, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Spinner click listener
         spinner.setOnItemSelectedListener((OnItemSelectedListener) this);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
-        // Spinner Drop down elements
-        List<String> categories = new ArrayList<String>();
-        categories.add("Now");
-        categories.add("10:00");
-        categories.add("11:00");
-        categories.add("12:00");
-        categories.add("13:00");
-        categories.add("14:00");
-        categories.add("15:00");
-        categories.add("16:00");
-        categories.add("17:00");
-        categories.add("18:00");
-        categories.add("19:00");
-        setContentView(R.layout.add_new_task);
 
-        // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
-
-        // Drop down layout style - list view with radio button
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        BottomNavigationView navView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
 
         navView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -98,7 +81,11 @@ public class AddNewTask extends AppCompatActivity implements OnItemSelectedListe
         String item = parent.getItemAtPosition(position).toString();
 
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+        if (item.equals("Now")) {
+            Toast.makeText(parent.getContext(), "Arriving soon", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+        }
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub

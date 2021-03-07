@@ -57,7 +57,7 @@
         </activity>
         <activity
             android:name=".IsolatingMainActivity"
-            android:label="User Menu"
+            android:label="Isolating Menu"
             android:parentActivityName=".IsolatingLoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -65,13 +65,7 @@
         </activity>
         <activity
             android:name=".AddNewTask"
-            android:parentActivityName=".IsolatingMainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".IsolatingMainActivity" />
-        </activity>
-        <activity
-            android:name=".CompletedTasksActivity"
+            android:label="Add New Task"
             android:parentActivityName=".IsolatingMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -79,6 +73,7 @@
         </activity>
         <activity
             android:name=".UserTaskAccepted"
+            android:label="User Task Accepted"
             android:parentActivityName=".AddNewTask">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
