@@ -59,7 +59,7 @@
         android:gravity="center_horizontal"
         android:inputType="textMultiLine"
 
-        android:text="Let's get started\n\nI am a:"
+        android:text="Let's get started\n\nI am a / an:"
         android:textSize="20sp"
 
         app:layout_constraintBottom_toTopOf="@+id/isolatingButton"

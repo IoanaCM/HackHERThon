@@ -1,0 +1,524 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"#FFFFFF\"\r\n    android:backgroundTint=\"@color/colorPrimaryDark\"\r\n    android:backgroundTintMode=\"add\"\r\n    tools:context=\".MainActivity\" >\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView3\"\r\n        android:layout_width=\"411dp\"\r\n        android:layout_height=\"47dp\"\r\n        android:background=\"#3d9acc\"\r\n        android:fontFamily=\"sans-serif-black\"\r\n        android:gravity=\"center_horizontal|fill_vertical\"\r\n        android:text=\"IsoHelp\"\r\n        android:textAppearance=\"@style/TextAppearance.AppCompat.Small\"\r\n        android:textColor=\"#fff\"\r\n        android:textSize=\"25sp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/editTextTextMultiLine2\"\r\n        android:layout_width=\"344dp\"\r\n        android:layout_height=\"90dp\"\r\n        android:layout_marginBottom=\"48dp\"\r\n        android:ems=\"14\"\r\n        android:gravity=\"center_horizontal\"\r\n        android:inputType=\"textMultiLine\"\r\n        android:text=\"Hi there!\\nWelcome to IsoHelp\"\r\n        android:textColor=\"#3d9acc\"\r\n        android:textSize=\"30sp\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/editTextTextMultiLine\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.492\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/textView3\"\r\n        app:layout_constraintVertical_bias=\"1.0\"\r\n        tools:ignore=\"MissingConstraints\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/editTextTextMultiLine\"\r\n        android:layout_width=\"367dp\"\r\n        android:layout_height=\"88dp\"\r\n        android:layout_marginBottom=\"60dp\"\r\n        android:ems=\"14\"\r\n        android:gravity=\"center_horizontal\"\r\n        android:inputType=\"textMultiLine\"\r\n        android:text=\"Let's get started\\n\\nI am a:\"\r\n        android:textSize=\"20sp\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/isolatingButton\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.488\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        tools:ignore=\"MissingConstraints\" />\r\n    <Button\r\n        android:id=\"@+id/volunteerButton\"\r\n        android:layout_width=\"236dp\"\r\n        android:layout_height=\"50dp\"\r\n        android:layout_marginBottom=\"120dp\"\r\n        android:backgroundTint=\"#3d9acc\"\r\n        android:text=\"NHS Volunteer\"\r\n        android:textColor=\"#ffffff\"\r\n        android:background=\"@drawable/rounded_corners\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.502\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        tools:ignore=\"MissingConstraints\" />\r\n    <Button\r\n        android:id=\"@+id/isolatingButton\"\r\n        android:layout_width=\"236dp\"\r\n        android:layout_height=\"50dp\"\r\n        android:layout_marginBottom=\"40dp\"\r\n        android:backgroundTint=\"#3d9acc\"\r\n        android:textColor=\"#ffffff\"\r\n        android:text=\"Isolating User\"\r\n        android:background=\"@drawable/rounded_corners\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/volunteerButton\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.497\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        tools:ignore=\"MissingConstraints\" />\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 1866d8a3eac807cf456506c46a4df1926faec682)
++++ app/src/main/res/layout/activity_main.xml	(date 1615069615892)
+@@ -73,6 +73,7 @@
+         app:layout_constraintHorizontal_bias="0.502"
+         app:layout_constraintStart_toStartOf="parent"
+         tools:ignore="MissingConstraints" />
++
+     <Button
+         android:id="@+id/isolatingButton"
+         android:layout_width="236dp"
+Index: app/src/main/java/com/example/hackherthon/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.hackherthon;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.TextView;\r\nimport android.view.View.OnClickListener;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        Button isolating = (Button) findViewById(R.id.isolatingButton);\r\n\r\n        //add the onClick listener\r\n        isolating.setOnClickListener(new OnClickListener(){\r\n            @Override\r\n            public void onClick(View view){\r\n                Intent isolatingIntent = new Intent(MainActivity.this, IsolatingLoginActivity.class);\r\n\r\n                startActivity(isolatingIntent);\r\n            }\r\n        });\r\n\r\n        Button volunteer = (Button) findViewById(R.id.volunteerButton);\r\n\r\n        //add the onClick listener\r\n        volunteer.setOnClickListener(new OnClickListener(){\r\n            @Override\r\n            public void onClick(View view){\r\n                Intent volunteerMainIntent = new Intent(MainActivity.this, VolunteerLoginActivity.class);\r\n\r\n                startActivity(volunteerMainIntent);\r\n            }\r\n        });\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hackherthon/MainActivity.java	(revision 1866d8a3eac807cf456506c46a4df1926faec682)
++++ app/src/main/java/com/example/hackherthon/MainActivity.java	(date 1615069653904)
+@@ -39,6 +39,7 @@
+                 startActivity(volunteerMainIntent);
+             }
+         });
++
+     }
+ 
+ 
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_7\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision 1866d8a3eac807cf456506c46a4df1926faec682)
++++ .idea/misc.xml	(date 1615066810879)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/res/layout/task_status.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/task_status.xml	(date 1615071656106)
++++ app/src/main/res/layout/task_status.xml	(date 1615071656106)
+@@ -0,0 +1,447 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="#FFFFFF"
++    android:backgroundTint="@color/colorPrimaryDark"
++    android:backgroundTintMode="add"
++    tools:context=".MainActivity" >
++
++    <TextView
++        android:id="@+id/textView3"
++        android:layout_width="411dp"
++        android:layout_height="47dp"
++        android:background="#3d9acc"
++        android:fontFamily="sans-serif-black"
++        android:gravity="center_horizontal|fill_vertical"
++        android:text="IsoHelp"
++        android:textAppearance="@style/TextAppearance.AppCompat.Small"
++        android:textColor="#fff"
++        android:textSize="25sp"
++        app:layout_constraintBottom_toTopOf="@+id/textView2"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="1.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.0" />
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="411dp"
++        android:layout_height="37dp"
++        android:layout_marginTop="8dp"
++        android:background="#174D9F"
++        android:gravity="center_horizontal|fill_vertical"
++        android:text="Task Status"
++        android:textColor="#FFF"
++        android:textSize="18sp"
++        android:textStyle="bold"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView3" />
++
++    <ScrollView
++        android:layout_width="412dp"
++        android:layout_height="178dp"
++        android:layout_marginTop="16dp"
++        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView"
++        app:layout_constraintVertical_bias="0.0">
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical">
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="30dp"
++                android:text="Pending Approval"
++                android:textColor="#3d9acc"
++                android:textSize="20sp"
++                android:textStyle="bold"
++                android:paddingLeft="10dp" />
++
++            <LinearLayout
++                android:layout_width="wrap_content"
++                android:layout_height="70dp"
++                android:orientation="horizontal">
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:orientation="vertical">
++
++                    <TextView
++                        android:layout_width="250dp"
++                        android:layout_height="wrap_content"
++                        android:paddingLeft="10dp"
++                        android:text="Task #1027"
++                        android:textStyle="bold"
++                        android:gravity="fill_vertical" >
++                    </TextView>
++
++                    <TextView
++                        android:layout_width="match_parent"
++                        android:layout_height="52dp"
++                        android:gravity="fill_vertical"
++                        android:inputType="textMultiLine"
++                        android:paddingLeft="10dp"
++                        android:text="Pick up the medicine from the pharmacy"
++                        android:textColor="#000000" />
++                </LinearLayout>
++                <Button
++                    android:id="@+id/delete_button1"
++                    android:layout_width="136dp"
++                    android:layout_height="35dp"
++                    android:layout_marginBottom="120dp"
++                    android:background="@drawable/rounded_corners"
++                    android:backgroundTint="#3d9acc"
++                        android:text="DELETE"
++                    android:textColor="#fff"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintHorizontal_bias="0.502"
++                    app:layout_constraintStart_toStartOf="parent"
++                    tools:ignore="MissingConstraints" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_width="wrap_content"
++                android:layout_height="50dp"
++                android:orientation="horizontal">
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:orientation="vertical">
++
++                    <TextView
++                        android:layout_width="250dp"
++                        android:layout_height="wrap_content"
++                        android:paddingLeft="10dp"
++                        android:text="Task #1030"
++                        android:textStyle="bold"
++                        android:gravity="fill_vertical" >
++                    </TextView>
++
++                    <TextView
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:gravity="fill_vertical"
++                        android:inputType="textMultiLine"
++                        android:paddingLeft="10dp"
++                        android:text="Other task - see notes"
++                        android:textColor="#000000" />
++                </LinearLayout>
++                <Button
++                    android:id="@+id/delete_button3"
++                    android:layout_width="136dp"
++                    android:layout_height="35dp"
++                    android:layout_marginBottom="120dp"
++                    android:background="@drawable/rounded_corners"
++                    android:backgroundTint="#3d9acc"
++                    android:text="DELETE"
++                    android:textColor="#fff"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintHorizontal_bias="0.502"
++                    app:layout_constraintStart_toStartOf="parent"
++                    tools:ignore="MissingConstraints" />
++            </LinearLayout>
++
++            <LinearLayout
++                android:layout_width="wrap_content"
++                android:layout_height="70dp"
++                android:orientation="horizontal">
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:orientation="vertical">
++
++                    <TextView
++                        android:layout_width="250dp"
++                        android:layout_height="wrap_content"
++                        android:paddingLeft="10dp"
++                        android:text="Task #1028"
++                        android:textStyle="bold"
++                        android:gravity="fill_vertical" >
++                    </TextView>
++
++                    <TextView
++                        android:layout_width="match_parent"
++                        android:layout_height="wrap_content"
++                        android:gravity="fill_vertical"
++                        android:inputType="textMultiLine"
++                        android:paddingLeft="10dp"
++                        android:text="Drop off the parcels at post office"
++                        android:textColor="#000000" />
++                </LinearLayout>
++                <Button
++                    android:id="@+id/delete_button2"
++                    android:layout_width="136dp"
++                    android:layout_height="35dp"
++                    android:layout_marginBottom="120dp"
++                    android:background="@drawable/rounded_corners"
++                    android:backgroundTint="#3d9acc"
++                    android:text="DELETE"
++                    android:textColor="#fff"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintHorizontal_bias="0.502"
++                    app:layout_constraintStart_toStartOf="parent"
++                    tools:ignore="MissingConstraints" />
++            </LinearLayout>
++
++
++        </LinearLayout>
++    </ScrollView>
++
++    <ScrollView
++        android:id="@+id/scrollView2"
++        android:layout_width="412dp"
++        android:layout_height="178dp"
++        android:layout_marginBottom="12dp"
++        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent">
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:background="#FFFFFF"
++            android:orientation="vertical">
++
++            <TextView
++                android:layout_width="400dp"
++                android:layout_height="40dp"
++                android:paddingLeft="10dp"
++                android:text="Accepted"
++                android:textColor="#3d9acc"
++                android:textSize="20sp"
++                android:textStyle="bold" />
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="400dp"
++                android:layout_height="60dp"
++                app:cardBackgroundColor="#94B3DAEF"
++                app:cardCornerRadius="40dp"
++                android:textAlignment="center">
++
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="50dp"
++                    android:orientation="horizontal">
++                    <TextView
++                        android:layout_width="200dp"
++                        android:layout_gravity="center|fill_horizontal"
++                        android:layout_height="wrap_content"
++                        android:gravity="fill_vertical"
++                        android:paddingLeft="20dp"
++                        android:text="Task #1028"
++                        android:textSize="15dp"
++                        android:textStyle="bold" />
++
++                    <TextView
++                        android:layout_width="250dp"
++                        android:layout_gravity="center|fill_horizontal"
++                        android:layout_height="wrap_content"
++                        android:gravity="fill_vertical"
++                        android:text="Accepted by [Volunteer 1]"
++                        android:textSize="15dp"
++                        android:textStyle="bold"
++                        android:textColor="#174D9F"/>
++                </LinearLayout>
++
++            </androidx.cardview.widget.CardView>
++
++            <Space
++                android:layout_width="0dp"
++                android:layout_height="15dp" />
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="400dp"
++                android:layout_height="60dp"
++                app:cardBackgroundColor="#94B3DAEF"
++                app:cardCornerRadius="40dp"
++                android:textAlignment="center">
++
++                <LinearLayout
++                    android:layout_width="wrap_content"
++                    android:layout_height="50dp"
++                    android:orientation="horizontal">
++                    <TextView
++                        android:layout_width="200dp"
++                        android:layout_gravity="center|fill_horizontal"
++                        android:layout_height="wrap_content"
++                        android:gravity="fill_vertical"
++                        android:paddingLeft="20dp"
++                        android:text="Task #1030"
++                        android:textSize="15dp"
++                        android:textStyle="bold" />
++
++                    <TextView
++                        android:layout_width="250dp"
++                        android:layout_gravity="center|fill_horizontal"
++                        android:layout_height="wrap_content"
++                        android:gravity="fill_vertical"
++                        android:text="Accepted by [Volunteer 3]"
++                        android:textSize="15dp"
++                        android:textStyle="bold"
++                        android:textColor="#174D9F"/>
++                </LinearLayout>
++
++            </androidx.cardview.widget.CardView>
++
++
++        </LinearLayout>
++    </ScrollView>
++
++    <ScrollView
++        android:id="@+id/scrollView3"
++        android:layout_width="412dp"
++        android:layout_height="178dp"
++        android:layout_marginBottom="56dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent">
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical">
++
++            <TextView
++                android:layout_width="400dp"
++                android:layout_height="34dp"
++                android:paddingLeft="10dp"
++                android:text="Pending Confirmation"
++                android:textColor="#3d9acc"
++                android:textSize="20sp"
++                android:gravity="fill_vertical"
++                android:textStyle="bold" />
++
++            <TextView
++                android:layout_width="300dp"
++                android:layout_height="wrap_content"
++                android:paddingLeft="10dp"
++                android:text="Task #0001"
++                android:textStyle="bold"
++                android:gravity="fill_vertical"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="52dp"
++                android:gravity="fill_vertical"
++                android:inputType="textMultiLine"
++                android:paddingLeft="10dp"
++                android:text="Collect Groceries from LIttle Waitrose &amp; Partners,\nGloucester Road"
++                android:textColor="#000000" />
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="40dp"
++                android:orientation="horizontal">
++
++                <Button
++                    android:id="@+id/confirm_button1"
++                    android:layout_width="136dp"
++                    android:layout_height="35dp"
++                    android:layout_marginLeft="50dp"
++                    android:layout_marginBottom="120dp"
++                    android:background="@drawable/rounded_corners"
++                    android:backgroundTint="#3d9acc"
++                    android:text="Confirm"
++                    android:textColor="#fff"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintHorizontal_bias="0.502"
++                    app:layout_constraintStart_toStartOf="parent"
++                    tools:ignore="MissingConstraints" />
++
++                <Space
++                    android:layout_width="20dp"
++                    android:layout_height="0dp" />
++
++                <Button
++                    android:id="@+id/reject_button1"
++                    android:layout_width="136dp"
++                    android:layout_height="35dp"
++                    android:layout_marginBottom="120dp"
++                    android:background="@drawable/rounded_corners"
++                    android:backgroundTint="#3d9acc"
++                    android:text="reject"
++                    android:textColor="#fff"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintHorizontal_bias="0.502"
++                    app:layout_constraintStart_toStartOf="parent"
++                    tools:ignore="MissingConstraints" />
++
++            </LinearLayout>
++
++            <TextView
++                android:layout_width="300dp"
++                android:layout_height="wrap_content"
++                android:paddingLeft="10dp"
++                android:text="Task #0002"
++                android:textStyle="bold"
++                android:gravity="fill_vertical"/>
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="30dp"
++                android:gravity="fill_vertical"
++                android:inputType="textMultiLine"
++                android:paddingLeft="10dp"
++                android:text="Walk the Dog"
++                android:textColor="#000000" />
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="40dp"
++                android:orientation="horizontal">
++
++                <Button
++                    android:id="@+id/confirm_button"
++                    android:layout_width="136dp"
++                    android:layout_height="35dp"
++                    android:layout_marginLeft="50dp"
++                    android:layout_marginBottom="120dp"
++                    android:background="@drawable/rounded_corners"
++                    android:backgroundTint="#3d9acc"
++                    android:text="Confirm"
++                    android:textColor="#fff"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintHorizontal_bias="0.502"
++                    app:layout_constraintStart_toStartOf="parent"
++                    tools:ignore="MissingConstraints" />
++
++                <Space
++                    android:layout_width="20dp"
++                    android:layout_height="0dp" />
++
++                <Button
++                    android:id="@+id/reject_button"
++                    android:layout_width="136dp"
++                    android:layout_height="35dp"
++                    android:layout_marginBottom="120dp"
++                    android:background="@drawable/rounded_corners"
++                    android:backgroundTint="#3d9acc"
++                    android:text="reject"
++                    android:textColor="#fff"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintHorizontal_bias="0.502"
++                    app:layout_constraintStart_toStartOf="parent"
++                    tools:ignore="MissingConstraints" />
++
++            </LinearLayout>
++
++
++        </LinearLayout>
++    </ScrollView>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"1.8\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision 1866d8a3eac807cf456506c46a4df1926faec682)
++++ .idea/gradle.xml	(date 1615066810890)
+@@ -15,6 +15,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
