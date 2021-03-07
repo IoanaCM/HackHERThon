@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".VolunteerSearchActivity"></activity>
         <activity
             android:name=".VolunteerLoginActivity"
             android:label="@string/title_activity_volunteer_login"
@@ -51,10 +52,10 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".IsolatingMainActivity"
             android:label="Isolating Menu"
@@ -74,9 +75,9 @@
         <activity
             android:name=".UserTaskAccepted"
             android:parentActivityName=".AddNewTask">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".AddNewTask" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AddNewTask" />
         </activity>
         <activity
             android:name=".VolunteerMainActivity"
@@ -102,7 +103,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".IsolatingMainActivity" />
         </activity>
-
     </application>
 
 </manifest>
