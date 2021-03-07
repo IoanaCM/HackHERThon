@@ -44,7 +44,7 @@ public class VolunteerSearchActivity extends AppCompatActivity {
                                 break;
 
                             case R.id.volunteer_completedtasks:
-                                // TODO add code to move to Completed Tasks window
+                                Intent completed = new Intent(VolunteerSearchActivity.this, CompletedVolunteerTasksActivity.class);
                                 break;
                         }
                         return false;
