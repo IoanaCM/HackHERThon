@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.hackherthon.VolunteerLoginActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#fff"
+        android:fontFamily="sans-serif-black"
+        android:text="REGISTER WITH US"
+        android:gravity="center_horizontal|fill_vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"/>
+    <Space
+        android:layout_height="10dp"
+        android:layout_width="0dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Username: "
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:paddingLeft="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="email"
+        android:id="@+id/email"
+        android:paddingLeft="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Password: "
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:paddingLeft="15dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:paddingLeft="15dp"
+        android:id="@+id/password"/>
+
+    <Space
+        android:layout_height="80dp"
+        android:layout_width="0dp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#9BC7DF"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="login" />
+    <Space
+        android:layout_height="20dp"
+        android:layout_width="0dp" />
+
+    <Button
+        android:id="@+id/registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#9BC7DF"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="registration" />
+</LinearLayout>

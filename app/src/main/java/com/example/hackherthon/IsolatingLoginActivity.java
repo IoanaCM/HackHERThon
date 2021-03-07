@@ -27,7 +27,7 @@ public class IsolatingLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_isolating_login);
+        setContentView(R.layout.login_page);
 
         mAuth = FirebaseAuth.getInstance();
 
