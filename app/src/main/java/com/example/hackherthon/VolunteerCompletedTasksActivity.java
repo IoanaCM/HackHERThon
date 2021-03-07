@@ -18,7 +18,7 @@ public class VolunteerCompletedTasksActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.completed_tasks);
+        setContentView(R.layout.users_completed_tasks);
 
         ImageButton settingsButton = (ImageButton) findViewById(R.id.volunteer_settings);
         settingsButton.setOnClickListener(new View.OnClickListener(){

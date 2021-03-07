@@ -45,7 +45,8 @@ public class IsolatingMainActivity extends AppCompatActivity {
                                 break;
 
                             case R.id.isolating_completedtasks:
-                                // TODO add code to move to Isolating User's completed tasks
+                                Intent completedTasksIntent = new Intent(IsolatingMainActivity.this, VolunteerCompletedTasksActivity.class);
+                                startActivity(completedTasksIntent);
                                 break;
                         }
                         return false;
