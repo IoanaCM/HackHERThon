@@ -54,7 +54,7 @@ public class VolunteerMainActivity extends AppCompatActivity{
                                 break;
 
                             case R.id.volunteer_completedtasks:
-                                // TODO add code to move to Completed Tasks window
+                                Intent completedTasksIntent = new Intent(VolunteerMainActivity.this, CompletedVolunteerTasksActivity.class);
                                 break;
                         }
                         return false;
