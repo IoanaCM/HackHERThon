@@ -26,3 +26,5 @@ android-studio
 firebase
 google-APIs
 java
+
+# Read more about it at: https://devpost.com/software/isohelp?ref_content=user-portfolio&ref_feature=in_progress
