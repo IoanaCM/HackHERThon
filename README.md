@@ -1,5 +1,5 @@
 # IsoHelp
-
+Winner of "Best COVID-19 related hack" category at Imperial College Women in SET Society's Hack-HER-Thon
 # Inspiration
 With some of the team members having to self isolate several times due to travel restrictions, we acknowledged how difficult it must be to undergo self-isolation without having anyone help you with day-to-day tasks.
 
